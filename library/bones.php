@@ -11,13 +11,7 @@ URL: http://themble.com/bones/
   - head cleanup (remove rsd, uri links, junk css, ect)
   - enqueueing scripts & styles
   - theme support functions
-  - custom menu output & fallbacks
-  - related post function
-  - page-navi function
   - removing <p> from around images
-  - customizing the post excerpt
-  - custom google+ integration
-  - adding custom fields to user profiles
 
 */
 
@@ -31,9 +25,9 @@ need.
 
 function bones_head_cleanup() {
 	// category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action( 'wp_head', 'feed_links', 2 );
 	// EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
 	// windows live writer
@@ -111,27 +105,13 @@ function bones_scripts_and_styles() {
 
   if (!is_admin()) {
 
-		// modernizr (without media query polyfill)
-		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-
 		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
     wp_register_style( 'bones-stylesheet-min', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 
-		// ie-only style sheet
-		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
-
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
-    }
-
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/dist/main.js', array( 'jquery' ), '', true );
     wp_register_script( 'bones-js-min', get_stylesheet_directory_uri() . '/library/js/dist/main.min.js', array( 'jquery' ), '', true );
-
-		// enqueue styles and scripts
-		wp_enqueue_script( 'bones-modernizr' );
 		
     // check environment before outputting appropriate stylesheet
     if ( we_are_live() ){
@@ -139,10 +119,6 @@ function bones_scripts_and_styles() {
     } else {
       wp_enqueue_style( 'bones-stylesheet' );
     }
-
-		wp_enqueue_style( 'bones-ie-only' );
-
-		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
 		I recommend using a plugin to call jQuery
@@ -171,92 +147,9 @@ function bones_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
+	set_post_thumbnail_size(300, 300, true);
 
-	// wp custom background (thx to @bransonwerner for update)
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',    // background image default
-	    'default-color' => '',    // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
-
-	// rss thingy
-	add_theme_support('automatic-feed-links');
-
-	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
-
-	// wp menus
-	add_theme_support( 'menus' );
-
-	// registering wp3+ menus
-	register_nav_menus(
-		array(
-			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
-		)
-	);
 } /* end bones theme support */
-
-
-/*********************
-RELATED POSTS FUNCTION
-*********************/
-
-// Related Posts Function (call using bones_related_posts(); )
-function bones_related_posts() {
-	echo '<ul id="bones-related-posts">';
-	global $post;
-	$tags = wp_get_post_tags( $post->ID );
-	if($tags) {
-		foreach( $tags as $tag ) {
-			$tag_arr .= $tag->slug . ',';
-		}
-		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
-			'post__not_in' => array($post->ID)
-		);
-		$related_posts = get_posts( $args );
-		if($related_posts) {
-			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-			<?php endforeach; }
-		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
-		<?php }
-	}
-	wp_reset_postdata();
-	echo '</ul>';
-} /* end bones related posts function */
-
-/*********************
-PAGE NAVI
-*********************/
-
-// Numeric Page Navi (built into the theme by default)
-function bones_page_navi() {
-  global $wp_query;
-  $bignum = 999999999;
-  if ( $wp_query->max_num_pages <= 1 )
-    return;
-  echo '<nav class="pagination">';
-  echo paginate_links( array(
-    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-    'format'       => '',
-    'current'      => max( 1, get_query_var('paged') ),
-    'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
-    'type'         => 'list',
-    'end_size'     => 3,
-    'mid_size'     => 3
-  ) );
-  echo '</nav>';
-} /* end page navi */
 
 /*********************
 RANDOM CLEANUP ITEMS
@@ -266,14 +159,5 @@ RANDOM CLEANUP ITEMS
 function bones_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
-
-// This removes the annoying […] to a Read More link
-function bones_excerpt_more($more) {
-	global $post;
-	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
-}
-
-
 
 ?>
