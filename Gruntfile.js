@@ -39,19 +39,6 @@ module.exports = function(grunt) {
                 options: { livereload: true }
             }
         },
-
-        browserSync: {
-            files: {
-                src : 'library/css/style.css'
-            },
-            options: {
-                watchTask: true // < VERY important
-            }
-            // ,
-            // options: {
-            //     proxy: "vcuartsbones.dev"
-            // }
-        },
  
         autoprefixer: {
             dist: {
@@ -117,7 +104,7 @@ module.exports = function(grunt) {
 
         concurrent: {
             watch: {
-                tasks: ['watch', 'sass', 'browserSync'],
+                tasks: ['watch', 'sass'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -144,10 +131,9 @@ module.exports = function(grunt) {
     // Browser Reload + File Watch
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browser-sync');
  
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('init', ['build']);
-    grunt.registerTask('dev', ['browserSync','watch']);
+    grunt.registerTask('dev', ['watch']);
     grunt.registerTask('build', ['sass', 'autoprefixer', 'cmq', 'cssmin', 'concat', 'uglify']);
 };
