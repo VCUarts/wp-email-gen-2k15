@@ -5,4 +5,44 @@ Author: VCUarts Web Dev Team
 Stylesheet: Main Stylesheet
 ******************************************************************/
 
+@import "color";
 @import "reset";
+
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+  display:block!important;
+  max-width:600px!important;
+  margin:0 auto!important; /* makes it centered */
+  clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+  padding:15px;
+  max-width:600px;
+  margin:0 auto;
+  display:block;
+  background-color: $white;
+
+  &.browser-view {
+    background-color: $background;
+    padding: 10px 0;
+  }
+
+  &.header-logo {
+    text-align: center;
+    padding: 0 15px;
+
+    img {
+      top: -15px;
+      position: relative;
+    }
+  }
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+table.head-wrap, table.body-wrap, table.footer-wrap { width: 100%; }

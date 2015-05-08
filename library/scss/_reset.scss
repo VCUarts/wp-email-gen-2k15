@@ -11,5 +11,16 @@ body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:
 /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
 .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
 .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
-#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important; background-color: $background; }
 /* End reset */
+
+/* Some sensible defaults for images
+1. "-ms-interpolation-mode: bicubic" works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)
+2. "border:none" removes border when linking images.
+3. Updated the common Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers. You may not always want all of your images to be block elements. Apply the "image_fix" class to any image you need to fix.
+
+Bring inline: Yes.
+*/
+img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width: 100%; height: auto;}
+a img {border:none;}
+.image_fix {display:block;}
