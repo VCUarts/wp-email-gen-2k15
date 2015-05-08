@@ -214,6 +214,10 @@ use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 ob_start();
 
 add_action('shutdown', function() {
+
+    if(is_admin())
+        return;
+
     $final = '';
 
     // We'll need to get the number of ob levels we're in, so that we can iterate over each, collecting
