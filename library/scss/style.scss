@@ -29,6 +29,7 @@ Stylesheet: Main Stylesheet
   &.browser-view {
     background-color: $background;
     padding: 10px 0;
+    font-size: 12px;
   }
 
   &.header-logo {
@@ -46,3 +47,23 @@ Stylesheet: Main Stylesheet
 .content table { width: 100%; }
 
 table.head-wrap, table.body-wrap, table.footer-wrap { width: 100%; }
+
+
+/* ------------------------------------- 
+    ELEMENTS 
+------------------------------------- */
+a { 
+  color: $arts-red;
+  text-decoration: none;
+}
+
+/*  Hero Image Captions */
+.img-caption {
+  background-color: $background;
+  overflow: hidden;
+  font-size: 12px;
+
+  p {
+    padding-left: 15px; padding-right: 15px;
+  }
+}
