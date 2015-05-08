@@ -43,6 +43,19 @@ Stylesheet: Main Stylesheet
   }
 }
 
+.column {
+  width: 265px;
+  float:left;
+
+  &.column-one {
+    padding-right: 10px;
+  }
+  &.column-two {
+    padding-left: 10px;
+  }
+}
+
+
 /* Let's make sure tables in the content area are 100% wide */
 .content table { width: 100%; }
 
