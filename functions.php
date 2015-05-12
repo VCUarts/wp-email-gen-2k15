@@ -35,10 +35,6 @@ function bones_ahoy() {
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
-  // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
-  // ie conditional wrapper
-
   // launching this stuff after theme setup
   bones_theme_support();
 

@@ -93,38 +93,6 @@ function bones_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
-
-/*********************
-SCRIPTS & ENQUEUEING
-*********************/
-
-// loading modernizr and jquery, and reply script
-function bones_scripts_and_styles() {
-
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
-
-  if (!is_admin()) {
-
-		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/dist/main.js', array( 'jquery' ), '', true );
-    wp_register_script( 'bones-js-min', get_stylesheet_directory_uri() . '/library/js/dist/main.min.js', array( 'jquery' ), '', true );
-		
-		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
-		*/
-		wp_enqueue_script( 'jquery' );
-    // check environment before outputting appropriate script
-		if ( we_are_live() ){
-      wp_enqueue_script( 'bones-js-min' );  
-    } else {
-      wp_enqueue_script( 'bones-js' );
-    }
-
-	}
-}
-
 /*********************
 THEME SUPPORT
 *********************/
