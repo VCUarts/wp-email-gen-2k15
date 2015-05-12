@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             }]
           },
           options: {
-            sourceMap: none, 
+            sourceMap: 'none', 
             outputStyle: 'compact', 
             imagePath: "library/images",
           }
