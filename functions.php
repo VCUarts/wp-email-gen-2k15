@@ -129,20 +129,6 @@ function bones_register_required_plugins() {
 
 }
 
-/************* THUMBNAIL SIZE OPTIONS *************/
-
-// Thumbnail sizes
-add_image_size( 'email-600', 600, 99999);
-
-
-add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
-
-function bones_custom_image_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'email-600' => __('600px wide'),
-    ) );
-}
-
 
 /************* THEME CUSTOMIZE *********************/
 
