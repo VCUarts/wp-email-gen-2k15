@@ -105,21 +105,10 @@ function bones_scripts_and_styles() {
 
   if (!is_admin()) {
 
-		// register main stylesheet
-		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
-    wp_register_style( 'bones-stylesheet-min', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
-
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/dist/main.js', array( 'jquery' ), '', true );
     wp_register_script( 'bones-js-min', get_stylesheet_directory_uri() . '/library/js/dist/main.min.js', array( 'jquery' ), '', true );
 		
-    // check environment before outputting appropriate stylesheet
-    if ( we_are_live() ){
-      wp_enqueue_style( 'bones-stylesheet-min' );  
-    } else {
-      wp_enqueue_style( 'bones-stylesheet' );
-    }
-
 		/*
 		I recommend using a plugin to call jQuery
 		using the google cdn. That way it stays cached
