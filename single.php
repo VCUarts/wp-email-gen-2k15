@@ -54,7 +54,14 @@
               <td>
 
               <?php 
+              $email_title = get_field('email_title');
+               ?>
 
+               <?php if ($email_title): ?>
+                 <h1 class="email-title"><?php echo $email_title; ?></h1>
+               <?php endif; ?>
+
+              <?php 
               // check if the flexible content field has rows of data
               if( have_rows('email_content') ):
 
