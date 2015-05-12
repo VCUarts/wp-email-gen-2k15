@@ -215,7 +215,7 @@ ob_start();
 
 add_action('shutdown', function() {
 
-    if(is_admin())
+    if(is_admin() || in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) )
         return;
 
     $final = '';
