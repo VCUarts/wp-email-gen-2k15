@@ -75,7 +75,7 @@
 
                ?>
 
-               <div class="social">
+               <div class="social" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/rule.png);">
                  <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png"></a>
                  <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png"></a>
                  <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png"></a>
