@@ -32,7 +32,7 @@
             <div class="content header-logo">
             <table>
               <tr>
-                <td><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-header.png" /></td>
+                <td><a href="http://arts.vcu.edu/about/national-rankings/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-header.png" /></a></td>
               </tr>
             </table>
             </div>
