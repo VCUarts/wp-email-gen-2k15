@@ -104,8 +104,25 @@ p, ul {
   }
 }
 
+/*  Social Link Bar */
 .social {
   text-align: center;
   background-repeat: repeat-x;
   margin: 20px 0;
+}
+
+/*  How to Apply Section */
+.how-to-apply {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+/*  Link Bar in How to Apply area */
+.link-bar {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: lighten($dk-gray, 15%);
+  a {
+    color: lighten($dk-gray, 15%);
+  }
 }

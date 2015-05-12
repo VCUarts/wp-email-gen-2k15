@@ -83,6 +83,17 @@
                  <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/email.png"></a>
                </div>
 
+               <div class="how-to-apply">
+                 <a href="http://arts.vcu.edu/admissions/how-to-apply/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/howtoapply.png"></a>
+               </div>
+
+               <div class="link-bar">
+                 <a href="http://arts.vcu.edu/about/national-rankings/" target="_blank">RANKINGS</a> //
+                 <a href="http://arts.vcu.edu/programs/undergraduate-programs/" target="_blank">MAJORS</a> //
+                 <a href="http://arts.vcu.edu/admissions/visit-campus/" target="_blank">VISIT CAMPUS</a> //
+                 <a href="http://arts.vcu.edu/admissions/publications/" target="_blank">PUBLICATIONS</a>
+               </div>
+
                </td>
              </tr>
            </table>
