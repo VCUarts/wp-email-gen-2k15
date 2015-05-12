@@ -12,6 +12,13 @@
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
+		<?php 
+			$style = file_get_contents(get_stylesheet_directory_uri() . '/library/css/style.css'); ?>
+
+			<style>
+				<?php echo $style; ?>
+			</style>
+
 	</head>
 
 	<body <?php body_class(); ?>>
