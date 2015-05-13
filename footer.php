@@ -1,4 +1,5 @@
-	<div class="footer">
+<?php if (is_single()): ?>
+  <div class="footer">
    <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
      <tr>
        <td></td>
@@ -27,6 +28,7 @@
      </tr>
    </table>
   </div>
+<?php endif; ?>
 
   <?php // all js scripts are loaded in library/bones.php ?>
 	<?php wp_footer(); ?>
