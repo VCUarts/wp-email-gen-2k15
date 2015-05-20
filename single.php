@@ -73,6 +73,8 @@
                     get_template_part( 'library/flexible-content/hero', 'module' );
                   elseif( get_row_layout() == 'wsiwyg_module' ):
                     get_template_part( 'library/flexible-content/wsiwyg', 'module' );
+                  elseif( get_row_layout() == 'gallery' ):
+                    get_template_part( 'library/flexible-content/gallery', 'module' );
                   endif;
 
 
