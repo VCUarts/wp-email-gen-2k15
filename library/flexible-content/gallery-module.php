@@ -2,60 +2,57 @@
   <tr>
 
   <?php 
-  $items = get_sub_field('gallery_item');
   $itemCount = 0;
+  $columns = get_sub_field('columns');
 
-  if (get_sub_field('columns') == 3):
-    foreach( $items as $item): $itemCount++;
+  if( have_rows('gallery_item') ):
 
-      if ($itemCount % 3 == 0 ): ?>
-        <td class="column column-last" width="180" valign="top">
-          <?php 
-          echo $itemCount; 
-          $itemCount = 0; ?>
+    while( have_rows('gallery_item') ): the_row(); $itemCount++; 
+
+      if ($columns == 3):
+
+        if ($itemCount % 3 == 0 ): ?>
+          <td class="column column-last" width="180" valign="top">
+            <?php get_template_part( 'library/flexible-content/gallery', 'item' );
+            $itemCount = 0; ?>
+        <?php 
+        elseif ($itemCount % 2 == 1 ): ?>
+          <td class="column column-first" width="180" valign="top">
+            <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
+        <?php 
+        else: ?>
+          <td class="column column-mid" width="180" valign="top">
+            <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
+        <?php 
+        endif; ?>
+          </td>
+
       <?php 
-      elseif ($itemCount % 2 == 1 ): ?>
-        <td class="column column-first" width="180" valign="top">
-          <?php echo $itemCount; ?>
+      elseif ($columns == 2):
+
+        if ($itemCount % 2 == 1 ): ?>
+          <td class="column column-one" width="265" valign="top">
+            <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
+        <?php 
+        else: ?>
+          <td class="column column-two" width="265" valign="top">
+            <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
+        <?php 
+        endif; ?>
+          </td>
+      
       <?php 
       else: ?>
-        <td class="column column-mid" width="180" valign="top">
-          <?php echo $itemCount; ?>
-      <?php 
-      endif; ?>
+        <td class="full-width">
+          <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
         </td>
-    <?php 
-    endforeach; ?>
 
-  <?php 
-  elseif (get_sub_field('columns') == 2):
-    foreach( $items as $item): $itemCount++;
-      if ($itemCount % 2 == 1 ): ?>
-        <td class="column column-one" width="265" valign="top">
-          <?php echo $itemCount; ?>
-      <?php 
-      else: ?>
-        <td class="column column-two" width="265" valign="top">
-          <?php echo $itemCount; ?>
-      <?php 
-      endif; ?>
-        </td>
-    <?php 
-    endforeach; ?>
-  
-  <?php 
-  else: ?>
-    <td>
-    <?php
-    foreach( $items as $item): ?>
-        <?php echo $itemCount; ?>
-    <?php
-    endforeach; ?>
-    </td>
 
-  <?php 
-  endif; 
-  ?>
+      <?php 
+      endif; 
+
+    endwhile;
+  endif; ?>
 
   </tr>
 </table>

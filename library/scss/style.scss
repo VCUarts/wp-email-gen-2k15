@@ -48,6 +48,7 @@ Stylesheet: Main Stylesheet
 
   &.column-one {
     padding-right: 10px;
+    clear: left;
   }
   &.column-two {
     padding-left: 10px;
@@ -59,12 +60,16 @@ Stylesheet: Main Stylesheet
   }
   &.column-first {
     padding-right: 15px;
+    clear: left;
   }
   &.column-last {
     padding-left: 15px;
   }
 }
-
+.full-width {
+  width: 100%;
+  display: block;
+}
 
 /* Let's make sure tables in the content area are 100% wide */
 .content table { width: 100%; }
@@ -140,9 +145,6 @@ p, ul {
   td.column {
     text-align: center;
     margin-bottom: 35px;
-  }
-  td.column-one {
-    clear: left;
   }
 }
 .chunk-title {
