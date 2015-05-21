@@ -64,7 +64,19 @@ module.exports = function(grunt) {
                     logConcurrentOutput: true
                 }
             }
-        } 
+        },
+
+        copy: {
+          main: {
+            files: [
+              // includes files within path and its sub-directories
+                {
+                expand: true, 
+                src: ['**','!build/**','!bower_components/**','!node_modules/**','!.git/**','!library/scss/**'], dest: 'build/'
+                },
+            ],
+          },
+        }, 
     });
  
     // 3. Where we tell Grunt what plugins to use
@@ -77,9 +89,12 @@ module.exports = function(grunt) {
     // Browser Reload + File Watch
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-watch');
+
+    // Build Related
+    grunt.loadNpmTasks('grunt-contrib-copy');
  
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('init', ['build']);
     grunt.registerTask('dev', ['watch']);
-    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'copy']);
 };
