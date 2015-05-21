@@ -9,10 +9,14 @@ $link = get_sub_field('gallery_link');
 <?php endif; ?>
 
   <?php if ($image): ?>
-    <img src="<?php echo $image['url']; ?>" alt="">
+    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
   <?php endif; ?>
 
-  <?php echo $caption; ?>
+  <?php if ($caption): ?>
+    <div class="caption">
+      <?php echo $caption; ?>
+    </div>
+  <?php endif; ?>
 
 <?php if ($link): ?>
   </a>
