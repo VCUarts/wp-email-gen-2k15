@@ -71,20 +71,8 @@ function bones_register_required_plugins() {
             'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
             'source'             => 'http://arts.vcu.edu/dev/advanced-custom-fields-pro.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-        ),
-
-        // This is an example of how to include a plugin from the WordPress Plugin Repository.
-        array(
-            'name'      => 'WordPress Importer',
-            'slug'      => 'wordpress-importer',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Debug Bar',
-            'slug'      => 'debug-bar',
-            'required'  => false,
         )
-
+        
     );
 
     /**
