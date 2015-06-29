@@ -170,6 +170,10 @@ function get_development_scripts(){
 
 }
 
+/*
+** Removing Admin Bar
+*/
+show_admin_bar( false );
 
 /*
 ** Removing emoji support
