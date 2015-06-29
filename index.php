@@ -1,7 +1,7 @@
-<?php get_header(); ?>
-
-	<div class="centered">
-		<h1><?php bloginfo('name'); ?></h1>
-	</div>
-
-<?php get_footer(); ?>
+<?php
+$host  = $_SERVER['HTTP_HOST'];
+$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+header("HTTP/1.1 301 Moved Permanently"); // for SEO
+header("Location: http://$host$uri");
+exit;
+?>
