@@ -4,25 +4,6 @@
 <tr>
   <td>
 
-    <!-- BROWSER VIEW LINK -->
-    <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
-      <tr>
-        <td></td>
-        <td class="container">
-
-            <div class="content browser-view">
-            <table>
-              <tr>
-                <td><a href="<?php the_permalink(); ?>">[browser view]</a></td>
-              </tr>
-            </table>
-            </div>
-
-        </td>
-        <td></td>
-      </tr>
-    </table><!-- /BROWSER VIEW LINK  -->
-
     <!-- HEADER -->
     <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
       <tr>

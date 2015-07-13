@@ -6,6 +6,7 @@
             "key": "field_55537942e9ab0",
             "label": "Chunk Headline",
             "name": "chunk_headline",
+            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -27,6 +28,7 @@
             "key": "field_555377d1e9aaf",
             "label": "Chunk Image",
             "name": "chunk_image",
+            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -51,6 +53,7 @@
             "key": "field_55537950e9ab1",
             "label": "Chunk Content",
             "name": "chunk_content",
+            "prefix": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -69,6 +72,7 @@
             "key": "field_5553796ee9ab2",
             "label": "More Details Link",
             "name": "more_link",
+            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -99,5 +103,6 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1435589433
+    "modified": 1436797711,
+    "local": "json"
 }
