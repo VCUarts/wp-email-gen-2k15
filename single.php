@@ -10,7 +10,7 @@
         <td></td>
         <td class="header container">
 
-            <div class="content header-logo">
+            <div class="header-logo">
             <table>
               <tr>
                 <td><a href="http://arts.vcu.edu/about/national-rankings/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-header.png" /></a></td>
@@ -42,35 +42,67 @@
                  <h1 class="email-title"><?php echo $email_title; ?></h1>
                <?php endif; ?>
 
+               </td>
+             </tr>
+           </table>
+           </div> <!-- closing content before hero -->
+
               <?php 
               // check if the flexible content field has rows of data
               if( have_rows('email_content') ):
 
                 // loop through the rows of data
-                while ( have_rows('email_content') ) : the_row();
+                while ( have_rows('email_content') ) : the_row(); ?>
 
+                  <?php
                   // check current row layout
                   if( get_row_layout() == 'hero_image_module' ):
-                    get_template_part( 'library/flexible-content/hero', 'module' );
+                    get_template_part( 'library/flexible-content/hero', 'module' ); ?>
+
+
+            <div class="content"> <!-- opening content before hero -->
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr>
+                <td>
+
+                  <?php
                   elseif( get_row_layout() == 'wsiwyg_module' ):
                     get_template_part( 'library/flexible-content/wsiwyg', 'module' );
                   elseif( get_row_layout() == 'gallery' ):
                     get_template_part( 'library/flexible-content/gallery', 'module' );
                   endif;
 
+                endwhile;   ?> 
 
-                endwhile;   
+                </td>
+                </tr>
+             </table>
+             </div> <!-- closing all content-->
 
+              <?php
               endif;
-
                ?>
 
-               <div class="social" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/rule.png);">
-                 <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png"></a>
-                 <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png"></a>
-                 <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png"></a>
-                 <a href="http://www.youtube.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/youtube.png"></a>
-                 <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/email.png"></a>
+               <div class="social">
+                <table cellpadding="0" cellspacing="0" border="0" align="center" class="social-table">
+                  <tr>
+                    <td width="20%">
+                      <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="http://www.youtube.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/youtube.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/email.png"></a>
+                    </td>
+                  </tr>
+                 </table>
                </div>
 
                <?php 
@@ -79,6 +111,13 @@
                $chunkCount = 0;
 
                if( $chunks ): ?>
+
+               <div class="content">
+               <table cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td>
+
+
                <div class="chunks">
                <table cellpadding="0" cellspacing="0" border="0" align="center">
                  <tr>
@@ -104,23 +143,18 @@
                  </tr>
                </table>
                </div>
-               <?php endif; ?>
-
-               <div class="how-to-apply">
-                 <a href="http://arts.vcu.edu/admissions/how-to-apply/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/howtoapply.png"></a>
-               </div>
-
-               <div class="link-bar">
-                 <a href="http://arts.vcu.edu/about/national-rankings/" target="_blank">RANKINGS</a> //
-                 <a href="http://arts.vcu.edu/programs/undergraduate-programs/" target="_blank">MAJORS</a> //
-                 <a href="http://arts.vcu.edu/admissions/visit-campus/" target="_blank">VISIT CAMPUS</a> //
-                 <a href="http://arts.vcu.edu/admissions/publications/" target="_blank">PUBLICATIONS</a>
-               </div>
 
                </td>
-             </tr>
-           </table>
-           </div>
+                </tr>
+             </table>
+             </div>
+
+             <?php endif; ?>
+
+
+             <div class="how-to-apply">
+               <a href="http://arts.vcu.edu/admissions/how-to-apply/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/howtoapply.png"></a>
+             </div>
 
          </td>
        </tr>

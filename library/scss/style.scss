@@ -10,6 +10,17 @@ Stylesheet: Main Stylesheet
 
 * { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
+//let's reset all the good good
+table, td, tr, thead, tbody {
+  border-spacing: 0;
+  padding:0;
+  margin:0;
+}
+
+#backgroundTable {
+  overflow: hidden;
+}
+
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
 .container {
   display:block!important;
@@ -20,7 +31,7 @@ Stylesheet: Main Stylesheet
 
 /* This should also be a block element, so that it will fill 100% of the .container */
 .content {
-  padding:15px;
+  padding:25px;
   max-width:600px;
   margin:0 auto;
   display:block;
@@ -31,27 +42,29 @@ Stylesheet: Main Stylesheet
     padding: 10px 0;
     font-size: 12px;
   }
+}
 
-  &.header-logo {
-    text-align: center;
-    padding: 0 15px;
+.header-logo {
+  display:block;
+  background:white;
+  padding: 40px 0 0 0;
+  width:100%;
 
-    img {
-      margin-top: -15px;
-    }
+  img {
+    margin-left:11px;
   }
 }
 
 .column {
-  width: 265px;
+  width: 245px;
   float:left;
 
   &.column-one {
-    padding-right: 10px;
+    padding-right: 20px;
     clear: left;
   }
   &.column-two {
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   // 3 Column Grid
@@ -59,11 +72,11 @@ Stylesheet: Main Stylesheet
     width: 180px;
   }
   &.column-first {
-    padding-right: 15px;
+    padding-right: 20px;
     clear: left;
   }
   &.column-last {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 }
 .full-width {
@@ -90,8 +103,14 @@ h1 { font-weight:200; font-size: 44px;}
 h2 { font-weight:200; font-size: 37px;}
 h3 { font-weight:500; font-size: 27px;}
 h4 { font-weight:500; font-size: 23px;}
-h5 { font-weight:900; font-size: 17px;}
+h5 { font-weight:200; font-size: 24px; line-height:32px;}
 h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:$lt-black;}
+
+//for when people stick images inside the heading tag
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
+  margin-bottom:20px;
+  display:block;
+}
 
 
 /* ------------------------------------- 
@@ -100,25 +119,26 @@ h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:$lt-blac
 a { 
   color: $arts-red;
   text-decoration: none;
+  margin:0;
+  padding:0;
 }
 
 p, ul { 
   margin-bottom: 10px; 
-  font-weight: normal; 
-  font-size:14px; 
-  line-height:1.6;
+  font-weight: 200; 
+  font-size:16px; 
+  line-height:28px;
+  color: $dk-gray;
 }
 
 .email-title {
-  font-weight: 600;
+  font-weight: 200;
   font-size: 27px;
-  text-align: center;
   margin-top: 0;
+  margin-bottom:20px;
 }
 
 .hero-module {
-  margin-bottom: 35px;
-
   img {
     width: 100%;
   }
@@ -126,20 +146,29 @@ p, ul {
 
 /*  Hero Image Captions */
 .img-caption {
-  background-color: $background;
+  background-color: $lt-gray;
   overflow: hidden;
 
   p {
-    padding-left: 15px; padding-right: 15px;
+    padding-left: 25px; padding-right: 25px;
     font-size: 12px;
   }
 }
 
 /*  Social Link Bar */
 .social {
-  text-align: center;
-  background-repeat: repeat-x;
-  margin: 40px 0;
+  background: $lt-gray;
+  margin: 20px 0 0 0;
+  padding:20px 0;
+
+  .social-table {
+    table-layout: auto;
+    width:100%;
+    td {
+      width:20%;
+      text-align: center;
+    }
+  }
 }
 
 /*  How to Apply Section */
@@ -159,16 +188,10 @@ p, ul {
 /*  How to Apply Section */
 .how-to-apply {
   text-align: center;
-  margin: 40px 0 20px 0;
-}
-
-/*  Link Bar in How to Apply area */
-.link-bar {
-  text-align: center;
-  margin: 40px 0 20px 0;
-  color: lighten($dk-gray, 15%);
+  margin: 0;
   a {
-    color: lighten($dk-gray, 15%);
+    display:block;
+    margin:0;
   }
 }
 
@@ -198,15 +221,29 @@ p, ul {
 ------------------------------------- */
 
 .footer {
-  background: $black;
-  color: $white;
+  background: $dk-gray;
+  color: $gray;
 
   .content {
     background: none;
-    padding-left: 0; padding-right: 0;
+
     p {
-      font-size: 10px;
-      line-height: 1.6;
+      color: $gray;
+      font-size:12px;
+      line-height:22px;
+      margin-bottom:30px;
+    }
+
+    a {
+      color:white;
+    }
+
+    .link-bar {
+      margin: 0 0 20px 0;
+      color: lighten($dk-gray, 15%);
+      p {
+        font-size:16px;
+      }
     }
   }
 }
