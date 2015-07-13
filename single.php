@@ -134,7 +134,7 @@
                       <td class="column column-one" width="265" valign="top">
                     <?php endif; ?>
                        <?php if ($image):?><img src="<?php echo $image['url'];?>"><?php endif; ?>
-                       <?php if ($chunk_title):?><h2 class="chunk-title"><?php echo $chunk_title; ?></h2><?php endif; ?>
+                       <?php if ($chunk_title):?><h5 class="chunk-title"><?php echo $chunk_title; ?></h5><?php endif; ?>
                        <?php if ($chunk_content): echo $chunk_content; endif; ?>
                        <?php if ($chunk_link): ?><a href="<?php echo $chunk_link; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/more-btn.png" /></a> <?php endif; ?>
                       </td>

@@ -180,14 +180,13 @@ p, ul {
   }
 }
 .chunk-title {
-  font-weight: 600;
-  font-size: 17px;
+  margin-top:20px;
 }
 
 /*  How to Apply Section */
 .how-to-apply {
   text-align: center;
-  margin: 0;
+  margin: 0 0 -2px 0;
   a {
     display:block;
     margin:0;
@@ -196,7 +195,7 @@ p, ul {
 
 /*  Gallery Wrap */
 .gallery {
-  margin: 40px 0 20px 0;
+  margin: 20px 0 0 0;
 
   .column {
     margin-top: 10px;
@@ -210,7 +209,7 @@ p, ul {
 /*  Gallery Captions */
 .caption {
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
