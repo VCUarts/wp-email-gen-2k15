@@ -26,6 +26,8 @@
                  </p>
                  <p>
                    <a href="http://www.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcu-logo.png"></a>
+                   <img src="<?php echo get_template_directory_uri(); ?>/library/images/footer-divider.png">
+                   <a href="http://www.arts.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-logo.png"></a>
                  </p>
                </td>
              </tr>
