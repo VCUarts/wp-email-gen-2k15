@@ -170,16 +170,30 @@ function get_development_scripts(){
 
 }
 
+
 /*
 ** Removing Admin Bar
 */
 show_admin_bar( false );
+
 
 /*
 ** Removing emoji support
 */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
+/*
+** Strip Image Width / Height Attributes from Post Editor
+*/
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+
+function remove_thumbnail_dimensions( $html ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
 
 
 /*
