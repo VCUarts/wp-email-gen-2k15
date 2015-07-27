@@ -39,7 +39,7 @@
                ?>
 
                <?php if ($email_title): ?>
-                 <h1 class="email-title"><?php echo $email_title; ?></h1>
+                 <center><h1 class="email-title"><?php echo $email_title; ?></h1></center>
                <?php endif; ?>
 
                </td>
