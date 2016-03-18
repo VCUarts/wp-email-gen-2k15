@@ -1,6 +1,6 @@
-## VCUarts Email Generator 2k15
+## Email Generator 2k15
 
-*Installation (only required if not using vvvcuarts vagrant)*
+*Installation*
 ```bash
 npm install
 ```
