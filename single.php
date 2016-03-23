@@ -1,27 +1,40 @@
 <?php get_header(); ?>
 
 <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
-<tr>
-  <td>
+  <tr>
+    <td>
 
     <!-- HEADER -->
-    <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
-      <tr>
-        <td></td>
-        <td class="header container">
+      <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
+       <!-- row -->
+        <tr>
+
+          <td>
+          </td>
+
+          <td class="header container">
 
             <div class="header-logo">
-            <table>
-              <tr>
-                <td><a href="http://arts.vcu.edu/about/national-rankings/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-header.png" /></a></td>
-              </tr>
-            </table>
+              <table>
+                <tr>
+                  <td>
+                    <a href="http://arts.vcu.edu/about/national-rankings/" target="_blank">
+                      <img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-header.png" />
+                    </a>
+                  </td>
+                </tr>
+              </table>
             </div>
 
-        </td>
-        <td></td>
-      </tr>
-    </table><!-- /HEADER -->
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+       <!-- end of row -->
+      </table>
+      <!-- /HEADER -->
 
     <!-- BODY -->
     <table cellpadding="0" cellspacing="0" border="0" align="center" class="body-wrap">
@@ -30,21 +43,21 @@
         <td class="container" bgcolor="#FFFFFF">
 
           <div class="content">
-          <table cellpadding="0" cellspacing="0" border="0" align="center">
-            <tr>
-              <td>
+            <table cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr>
+                <td>
 
-              <?php 
-              $email_title = get_field('email_title');
-               ?>
+                <?php 
+                $email_title = get_field('email_title');
+                 ?>
 
-               <?php if ($email_title): ?>
-                 <center><h1 class="email-title"><?php echo $email_title; ?></h1></center>
-               <?php endif; ?>
+                 <?php if ($email_title): ?>
+                   <center><h1 class="email-title"><?php echo $email_title; ?></h1></center>
+                 <?php endif; ?>
 
-               </td>
-             </tr>
-           </table>
+                 </td>
+               </tr>
+             </table>
            </div> <!-- closing content before hero -->
 
               <?php 
@@ -59,30 +72,15 @@
                   if( get_row_layout() == 'hero_image_module' ):
                     get_template_part( 'library/flexible-content/hero', 'module' ); ?>
 
-
-            <div class="content"> <!-- opening content before hero -->
-            <table cellpadding="0" cellspacing="0" border="0" align="center">
-              <tr>
-                <td>
-
                   <?php
                   elseif( get_row_layout() == 'wsiwyg_module' ):
                     get_template_part( 'library/flexible-content/wsiwyg', 'module' );
                   elseif( get_row_layout() == 'gallery' ):
                     get_template_part( 'library/flexible-content/gallery', 'module' );
-                  endif;
+                  endif; ?> 
 
-                endwhile;   ?> 
-
-                </td>
-                </tr>
-             </table>
-             </div> <!-- closing all content-->
-
-              <?php
-              endif;
-               ?>
-
+              <?php endwhile; endif; ?>
+            
                <div class="social">
                 <table cellpadding="0" cellspacing="0" border="0" align="center" class="social-table">
                   <tr>
