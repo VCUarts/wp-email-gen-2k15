@@ -68,5 +68,4 @@ temp/
 
 *.codekit
 *.scssc
-library/css/*
 build/
