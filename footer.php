@@ -29,6 +29,34 @@
                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/footer-divider.png">
                    <a href="http://www.arts.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-logo.png"></a>
                  </p>
+
+                 <div class="social">
+                <table cellpadding="0" cellspacing="0" border="0" align="center" class="social-table">
+                  <tr>
+                    <td width="20%">
+                      <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="http://www.youtube.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/youtube.png"></a>
+                    </td>
+                    <td width="20%">
+                      <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/email.png"></a>
+                    </td>
+                  </tr>
+                 </table>
+               </div>
+
+
+               <div class="how-to-apply">
+                <a href="http://arts.vcu.edu/admissions/how-to-apply/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/howtoapply.png"></a>
+              </div>
+
                </td>
              </tr>
            </table>

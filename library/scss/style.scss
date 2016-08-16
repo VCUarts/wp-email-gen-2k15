@@ -8,7 +8,12 @@ Stylesheet: Main Stylesheet
 @import "color";
 @import "reset";
 
+/*
 * { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Karla); 
+* { font-family:'Karla', 'Helvetica Neue', Helvetica, sans-serif; }
 
 //let's reset all the good good
 table, td, tr, thead, tbody {
@@ -27,6 +32,7 @@ table, td, tr, thead, tbody {
   max-width:600px!important;
   margin:0 auto!important; /* makes it centered */
   clear:both!important;
+  border: 5px solid $black;
 }
 
 /* This should also be a block element, so that it will fill 100% of the .container */
@@ -89,13 +95,28 @@ table, td, tr, thead, tbody {
 
 table.head-wrap, table.body-wrap, table.footer-wrap { width: 100%; }
 
+table.head-wrap {
+  .container {
+    border-bottom: 0;
+  }
+}
+table.body-wrap {
+  .container {
+    border-top: 0; border-bottom: 0;
+  }
+}
+
+img {
+  border: 5px solid $black;
+}
+
 
 /* ------------------------------------- 
     TYPOGRAPHY 
 ------------------------------------- */
 
 h1,h2,h3,h4,h5,h6 {
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:$black;
+font-family: "Karla", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:$black;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: $dk-gray; line-height: 0; text-transform: none; }
 
@@ -158,7 +179,7 @@ p, ul {
 
 /*  Social Link Bar */
 .social {
-  background: $lt-gray;
+  /*background: $lt-gray;*/
   margin: 20px 0 0 0;
   padding:20px 0;
 
@@ -220,8 +241,8 @@ p, ul {
 ------------------------------------- */
 
 .footer {
-  background: $dk-gray;
-  color: $gray;
+  background: $black;
+  color: $white;
 
   .content {
     background: none;
