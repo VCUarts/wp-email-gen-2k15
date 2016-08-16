@@ -292,9 +292,7 @@ add_filter('final_output', function($output) {
   // create instance
   $cssToInlineStyles = new CssToInlineStyles();
   $css = file_get_contents(__DIR__ . '/library/css/style.css');
-  $cssToInlineStyles->setHTML($output);
-  $cssToInlineStyles->setCSS($css);
   // output
-  echo $cssToInlineStyles->convert();
+  echo $cssToInlineStyles->convert( $output, $css );
 });
 /* DON'T DELETE THIS CLOSING TAG */ ?>
