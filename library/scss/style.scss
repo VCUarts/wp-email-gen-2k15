@@ -63,7 +63,7 @@ table, td, tr, thead, tbody {
 
 .column {
   width: 245px;
-  float:left;
+  display: inline-block;
 
   &.column-one {
     padding-right: 20px;
@@ -87,7 +87,7 @@ table, td, tr, thead, tbody {
 }
 .full-width {
   width: 100%;
-  display: block;
+  border: 5px solid $black;
 }
 
 /* Let's make sure tables in the content area are 100% wide */
@@ -104,10 +104,6 @@ table.body-wrap {
   .container {
     border-top: 0; border-bottom: 0;
   }
-}
-
-img {
-  border: 5px solid $black;
 }
 
 
@@ -159,13 +155,6 @@ p, ul {
   margin-bottom:15px;
 }
 
-.hero-module + .hero-module {
-  padding-top: 40px;
-  img {
-    width: 100%;
-  }
-}
-
 /*  Hero Image Captions */
 .img-caption {
   background-color: $lt-gray;
@@ -212,19 +201,6 @@ p, ul {
   a {
     display:block;
     margin:0;
-  }
-}
-
-/*  Gallery Wrap */
-.gallery {
-  margin: 20px 0 0 0;
-
-  .column {
-    margin-top: 10px;
-
-    &.full-width {
-      margin-top: 30px;
-    }
   }
 }
 

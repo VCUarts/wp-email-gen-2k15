@@ -2,9 +2,6 @@
   <table cellpadding="0" cellspacing="0" border="0" align="center">
     <tr>
       <td>
-        <div class="gallery">
-          <table cellpadding="0" cellspacing="0" border="0" align="center">
-            <tr>
 
             <?php 
             $itemCount = 0;
@@ -36,11 +33,11 @@
                 elseif ($columns == 2):
 
                   if ($itemCount % 2 == 1 ): ?>
-                    <td class="column column-one" width="265" valign="top">
+                    <td class="column column-one" width="245" valign="top">
                       <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
                   <?php 
                   else: ?>
-                    <td class="column column-two" width="265" valign="top">
+                    <td class="column column-two" width="245" valign="top">
                       <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
                   <?php 
                   endif; ?>
@@ -58,10 +55,6 @@
 
               endwhile;
             endif; ?>
-
-            </tr>
-          </table>
-        </div>
       </td>
     </tr>
   </table>

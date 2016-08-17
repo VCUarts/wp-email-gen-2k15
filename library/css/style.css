@@ -12,19 +12,18 @@ a img{border:none}
 *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:600px!important;margin:0 auto!important;clear:both!important;border:5px solid #000}
-.content,.full-width,.header-logo,.how-to-apply a{display:block}
-.content{padding:25px;max-width:600px;margin:0 auto;background-color:#FFF}
+.content{padding:25px;max-width:600px;margin:0 auto;display:block;background-color:#FFF}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
-.header-logo{background:#fff;padding:40px 0 0;width:100%}
+.header-logo{display:block;background:#fff;padding:40px 0 0;width:100%}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
 .column.column-last,.column.column-two{padding-left:20px}
 .header-logo img{margin-left:11px}
-.column{width:245px;float:left}
+.column{width:245px;display:inline-block}
 .column.column-first,.column.column-last,.column.column-mid{width:180px}
-.content table,.full-width,.hero-module+.hero-module img,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}
+.full-width{width:100%;border:5px solid #000}
+.content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}
 table.head-wrap .container{border-bottom:0}
 table.body-wrap .container{border-top:0;border-bottom:0}
-img{border:5px solid #000}
 h1,h2,h3,h4,h5,h6{font-family:Karla,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:1.1;margin-bottom:15px;color:#000}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-size:60%;color:#272727;line-height:0;text-transform:none}
 h1{font-size:44px}
@@ -38,7 +37,6 @@ h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin-bottom:20px;display:block}
 a{color:#EE3440;margin:0;padding:0}
 p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#272727}
 .email-title{font-weight:200;font-size:27px;margin-top:10px;margin-bottom:15px}
-.hero-module+.hero-module{padding-top:40px}
 .img-caption{background-color:#e3e3e3;overflow:hidden}
 .img-caption p{padding-left:25px;padding-right:25px;font-size:12px}
 .social{margin:20px 0 0;padding:20px 0}
@@ -48,10 +46,7 @@ p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#2
 .chunks td.column{margin-bottom:35px}
 .chunk-title{margin-top:20px}
 .how-to-apply{text-align:center;margin:0 0 -2px}
-.how-to-apply a{margin:0}
-.gallery{margin:20px 0 0}
-.gallery .column{margin-top:10px}
-.gallery .column.full-width{margin-top:30px}
+.how-to-apply a{display:block;margin:0}
 .caption p{font-size:14px}
 .footer{background:#000;color:#FFF}
 .footer .content{background:0 0}
