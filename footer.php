@@ -10,12 +10,17 @@
              <tr>
                <td>
 
-                <div class="link-bar">
+                <!-- <div class="link-bar">
                  <p><a href="http://arts.vcu.edu/about/national-rankings/" target="_blank">Rankings</a> &nbsp;&nbsp;
                  <a href="http://arts.vcu.edu/programs/undergraduate-programs/" target="_blank">Majors</a> &nbsp;&nbsp;
                  <a href="http://arts.vcu.edu/admissions/visit-campus/" target="_blank">Visit Campus</a> &nbsp;&nbsp;
                  <a href="http://arts.vcu.edu/admissions/publications/" target="_blank">Publications</a></p>
-               </div>
+               </div> -->
+                 <p>
+                   <a href="http://www.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/footer/vcu.png"></a>
+                   <a href="http://www.arts.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/footer/vcuarts.png"></a>
+                   <a href="http://www.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/footer/apply.png"></a>
+                 </p>
 
                  <p>
                    Virginia Commonwealth University | School of the Arts <br>
@@ -24,29 +29,24 @@
                    <a href="mailto:arts@vcu.edu" target="_blank">arts@vcu.edu</a> &nbsp; | &nbsp;
                    <a href="<?php the_permalink(); ?>">View in Browser</a>
                  </p>
-                 <p>
-                   <a href="http://www.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcu-logo.png"></a>
-                   <img src="<?php echo get_template_directory_uri(); ?>/library/images/footer-divider.png">
-                   <a href="http://www.arts.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts-logo.png"></a>
-                 </p>
 
                  <div class="social">
                 <table cellpadding="0" cellspacing="0" border="0" align="center" class="social-table">
                   <tr>
                     <td width="20%">
-                      <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png"></a>
+                      <a href="https://www.facebook.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/social/facebook.png"></a>
                     </td>
                     <td width="20%">
-                      <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png"></a>
+                      <a href="https://twitter.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/social/twitter.png"></a>
                     </td>
                     <td width="20%">
-                      <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png"></a>
+                      <a href="http://instagram.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/social/instagram.png"></a>
                     </td>
                     <td width="20%">
-                      <a href="http://www.youtube.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/youtube.png"></a>
+                      <a href="http://www.youtube.com/vcuarts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/social/youtube.png"></a>
                     </td>
                     <td width="20%">
-                      <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/email.png"></a>
+                      <a href="mailto:arts@vcu.edu" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/social/email_icon.png"></a>
                     </td>
                   </tr>
                  </table>

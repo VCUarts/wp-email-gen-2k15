@@ -21,7 +21,7 @@
                 <tr>
                   <td>
                     <a href="http://arts.vcu.edu/" target="_blank">
-                      <img src="<?php echo get_template_directory_uri(); ?>/library/images/vcuarts.png" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/vcuarts_header.png" />
                     </a>
                   </td>
                 </tr>
