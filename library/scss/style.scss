@@ -29,8 +29,9 @@ table, td, tr, thead, tbody {
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
 .container {
   display:block!important;
-  max-width:600px!important;
+  max-width:510px!important;
   margin:0 auto!important; /* makes it centered */
+  padding: 0 40px;
   clear:both!important;
   border: 5px solid $black;
 }
