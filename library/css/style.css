@@ -18,7 +18,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
 .column.column-last,.column.column-two{padding-left:20px}
 .header-logo img{margin-left:11px}
-.column{width:245px}
+.column{width:235px;float:left}
 .column.column-first,.column.column-last,.column.column-mid{width:180px}
 .full-width{width:100%;border:5px solid #000}
 .content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}

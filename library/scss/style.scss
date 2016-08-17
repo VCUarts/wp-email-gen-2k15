@@ -61,7 +61,8 @@ table, td, tr, thead, tbody {
 }
 
 .column {
-  width: 245px;
+  width: 235px;
+  float: left;
 
   &.column-one {
     padding-right: 20px;
