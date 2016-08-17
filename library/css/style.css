@@ -12,13 +12,13 @@ a img{border:none}
 *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:600px!important;margin:0 auto!important;clear:both!important;border:5px solid #000}
-.content{padding:25px;max-width:600px;margin:0 auto;display:block;background-color:#FFF}
+.content{margin:0 auto;display:block;background-color:#FFF}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
 .header-logo{display:block;background:#fff;padding:40px 0 0;width:100%}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
 .column.column-last,.column.column-two{padding-left:20px}
 .header-logo img{margin-left:11px}
-.column{width:245px;display:inline-block}
+.column{width:245px}
 .column.column-first,.column.column-last,.column.column-mid{width:180px}
 .full-width{width:100%;border:5px solid #000}
 .content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}

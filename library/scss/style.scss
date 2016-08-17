@@ -37,8 +37,6 @@ table, td, tr, thead, tbody {
 
 /* This should also be a block element, so that it will fill 100% of the .container */
 .content {
-  padding:25px;
-  max-width:600px;
   margin:0 auto;
   display:block;
   background-color: $white;
@@ -63,7 +61,6 @@ table, td, tr, thead, tbody {
 
 .column {
   width: 245px;
-  display: inline-block;
 
   &.column-one {
     padding-right: 20px;
