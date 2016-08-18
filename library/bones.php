@@ -47,6 +47,11 @@ function bones_head_cleanup() {
 
 } /* end bones head cleanup */
 
+function artmail_deregister_scripts(){
+  wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'artmail_deregister_scripts' );
+
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
 function rw_title( $title, $sep, $seplocation ) {
@@ -93,14 +98,6 @@ function bones_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
-/*********************
-THEME SUPPORT
-*********************/
-
-// Adding WP 3+ Functions & Theme Support
-function bones_theme_support() {
-
-} /* end bones theme support */
 
 /*********************
 RANDOM CLEANUP ITEMS

@@ -38,9 +38,6 @@ function bones_ahoy() {
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
-  // launching this stuff after theme setup
-  bones_theme_support();
-
   // cleaning up random code around images
   add_filter( 'the_content', 'bones_filter_ptags_on_images' );
 } /* end bones ahoy */

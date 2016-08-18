@@ -13,16 +13,6 @@
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
-		<?php 
-			if (is_single()):
-				$style = file_get_contents(get_stylesheet_directory_uri() . '/library/css/style.css'); ?>
-
-				<style>
-				<?php echo $style; ?>
-				</style>
-		<?php 
-			endif; ?>
-
 	</head>
 
 	<body <?php body_class(); ?>>
