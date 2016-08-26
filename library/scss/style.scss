@@ -48,7 +48,7 @@ table, td, tr, thead, tbody {
 .header-logo {
   display:block;
   background:white;
-  padding: 40px 0 0 0;
+  padding: 40px 0 40px 0;
   width:100%;
 }
 
@@ -96,6 +96,7 @@ table.head-wrap {
 table.body-wrap {
   .container {
     border-top: 0; border-bottom: 0;
+    padding-bottom: 40px;
   }
 }
 
@@ -142,10 +143,10 @@ p, ul {
 }
 
 .email-title {
-  font-weight: 200;
-  font-size: 27px;
+  font-size: 22px;
+  text-transform: uppercase;
   margin-top: 10px;
-  margin-bottom:15px;
+  margin-bottom:25px;
 }
 
 /*  Hero Image Captions */
