@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<!-- <table class="include-border"> -->
-
 <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
   <tr>
     <td>
@@ -21,7 +19,7 @@
                 <tr>
                   <td>
                     <a href="http://arts.vcu.edu/" target="_blank">
-                      <img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/vcuarts_header.png" />
+                      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/branding/vcuarts_header.png" />
                     </a>
                   </td>
                 </tr>
@@ -49,12 +47,12 @@
               <tr>
                 <td>
 
-                <?php 
-                $email_title = get_field('email_title');
-                 ?>
+                <?php
+                $email_title = get_field( 'email_title' );
+                if ( $email_title ) : ?>
 
-                 <?php if ($email_title): ?>
-                   <center><h1 class="email-title"><?php echo $email_title; ?></h1></center>
+                   <center><h1 class="email-title"><?php echo esc_html( $email_title ); ?></h1></center>
+
                  <?php endif; ?>
 
                  </td>
@@ -62,34 +60,31 @@
              </table>
            </div> <!-- closing content before hero -->
 
-              <?php 
+              <?php
               // check if the flexible content field has rows of data
-              if( have_rows('email_content') ):
+              if ( have_rows( 'email_content' ) ) :
 
                 // loop through the rows of data
-                while ( have_rows('email_content') ) : the_row(); ?>
+                while ( have_rows( 'email_content' ) ) : the_row();
 
-                  <?php
                   // check current row layout
-                  if( get_row_layout() == 'hero_image_module' ):
-                    get_template_part( 'library/flexible-content/hero', 'module' ); ?>
+                  if ( get_row_layout() == 'hero_image_module' ) :
+                    get_template_part( 'library/flexible-content/hero', 'module' );
 
-                  <?php
-                  elseif( get_row_layout() == 'wsiwyg_module' ):
-                    get_template_part( 'library/flexible-content/wsiwyg', 'module' );
-                  elseif( get_row_layout() == 'gallery' ):
-                    get_template_part( 'library/flexible-content/gallery', 'module' );
-                  endif; ?> 
+                    elseif ( get_row_layout() == 'wsiwyg_module' ) :
+                      get_template_part( 'library/flexible-content/wsiwyg', 'module' );
+                    elseif ( get_row_layout() == 'gallery' ) :
+                      get_template_part( 'library/flexible-content/gallery', 'module' );
+                  endif;
+                endwhile;
 
-              <?php endwhile; endif; ?>
-            
+              endif;
 
-               <?php 
 
-               $chunks = get_field('chunks');
-               $chunkCount = 0;
+               $chunks = get_field( 'chunks' );
+               $chunk_count = 0;
 
-               if( $chunks ): ?>
+               if ( $chunks ) : ?>
 
                <div class="content">
                <table cellpadding="0" cellspacing="0" border="0" align="center">
@@ -100,22 +95,26 @@
                <div class="chunks">
                <table cellpadding="0" cellspacing="0" border="0" align="center">
                  <tr>
-                  <?php foreach( $chunks as $post): // variable must be called $post (IMPORTANT) ?>
-                    <?php setup_postdata($post);
-                      $image = get_field('chunk_image'); 
-                      $chunk_title = get_field('chunk_headline');
-                      $chunk_content = get_field('chunk_content'); 
-                      $chunk_link = get_field('more_link'); ?>
+                  <?php foreach ( $chunks as $post ) : // variable must be called $post (IMPORTANT)
+                    setup_postdata( $post );
+                      $image = get_field( 'chunk_image' );
+                      $chunk_title = get_field( 'chunk_headline' );
+                      $chunk_content = get_field( 'chunk_content' );
+                      $chunk_link = get_field( 'more_link' ); ?>
 
-                    <?php if ($chunkCount++ % 2 == 1 ): ?>
+                    <?php if ( 1 == $chunk_count++ % 2 ) : ?>
                       <td class="column column-two" width="265" valign="top">
-                    <?php else: ?>
+                    <?php else : ?>
                       <td class="column column-one" width="265" valign="top">
                     <?php endif; ?>
-                       <?php if ($image):?><img src="<?php echo $image['url'];?>"><?php endif; ?>
-                       <?php if ($chunk_title):?><h5 class="chunk-title"><?php echo $chunk_title; ?></h5><?php endif; ?>
-                       <?php if ($chunk_content): echo $chunk_content; endif; ?>
-                       <?php if ($chunk_link): ?><a href="<?php echo $chunk_link; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/more-btn.png" /></a> <?php endif; ?>
+                       <?php if ( $image ) :?><img src="<?php echo esc_url( $image['url'] ); ?>"><?php endif; ?>
+                       <?php if ( $chunk_title ) :?>
+                         <h5 class="chunk-title"><?php echo esc_html( $chunk_title ); ?></h5>
+                       <?php endif; ?>
+                       <?php if ( $chunk_content ) :
+                         the_field( 'chunk_content' );
+                       endif; ?>
+                       <?php if ( $chunk_link ) : ?><a href="<?php echo esc_url( $chunk_link ); ?>" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/more-btn.png" /></a> <?php endif; ?>
                       </td>
                   <?php endforeach; ?>
                   <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -129,7 +128,6 @@
              </div>
 
              <?php endif; ?>
-            
 
          </td>
        </tr>
@@ -138,6 +136,5 @@
    </td>
  </tr>
  </table>
-  
-  <!-- </table> -->
-<?php get_footer(); ?>
+
+<?php get_footer();
