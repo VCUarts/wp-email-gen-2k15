@@ -215,12 +215,13 @@ p, ul {
 
   .content {
     background: none;
+    padding: 20px 0 25px 0;
 
     p {
       color: $gray;
       font-size:12px;
       line-height:22px;
-      // margin-bottom:30px;
+      margin-bottom:30px;
     }
 
     a {

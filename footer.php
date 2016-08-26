@@ -2,14 +2,11 @@
   <div class="footer container">
    <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
      <tr>
-       <td></td>
-       <td class="footer container">
-
-           <div class="content">
+       <td>
+         <div class="content">
            <table>
              <tr>
                <td>
-
                  <p>
                    <a href="http://www.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/footer/vcu.png"></a>
                    <a href="http://www.arts.vcu.edu/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/branding/footer/vcuarts.png"></a>
@@ -51,8 +48,7 @@
                </td>
              </tr>
            </table>
-           </div>
-
+         </div>
        </td>
        <td></td>
      </tr>
