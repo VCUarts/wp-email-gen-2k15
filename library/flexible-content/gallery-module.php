@@ -1,4 +1,4 @@
-<div class="content"> 
+<div class="gallery-wrap content"> 
   <table cellpadding="0" cellspacing="0" border="0" align="center">
     <tr>
       <td>

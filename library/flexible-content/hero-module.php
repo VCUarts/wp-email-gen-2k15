@@ -3,7 +3,7 @@
 $image = get_sub_field('hero_image');
 $caption = get_sub_field('hero_caption'); 
 $link = get_sub_field('hero_link'); ?>
-<div class="content"> 
+<div class="hero-wrap content"> 
   <table cellpadding="0" cellspacing="0" border="0" align="center">
     <tr>
       <td>

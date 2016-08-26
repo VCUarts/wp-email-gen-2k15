@@ -58,6 +58,7 @@ p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#2
 .footer .content .link-bar{margin:0 0 20px;color:#4d4d4d}
 .footer .content .link-bar p{font-size:16px}
 .footer .content .link-bar p a{color:#fff}
+.hero-wrap+.content{padding-top:20px}
 @media only screen and (max-width:600px){.column{width:100%!important;float:none!important;display:block}
 .column-first,.column-last,.column-mid,.column-one,.column-two{padding:0!important;margin-bottom:50px!important}
 }
