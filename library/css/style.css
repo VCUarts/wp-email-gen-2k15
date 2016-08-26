@@ -7,6 +7,7 @@ body{width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100
 .ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}
 #backgroundTable{margin:0;padding:0;width:100%!important;line-height:100%!important;background-color:#FFF;overflow:hidden}
 img{outline:0;-ms-interpolation-mode:bicubic;max-width:100%;height:auto}
+.body-wrap img{max-width:510px;width:100%}
 a img{border:none}
 .image_fix{display:block}
 *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
@@ -16,9 +17,11 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
 .header-logo{display:block;background:#fff;padding:40px 0 0;width:100%}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
-.column.column-last,.column.column-two{padding-left:20px}
-.column{width:235px;float:left}
-.column.column-first,.column.column-last,.column.column-mid{width:180px}
+.column{width:235px}
+.column.column-one{float:left}
+.column.column-two{float:left;padding-left:20px}
+.column.column-first,.column.column-last,.column.column-mid{float:left;width:180px}
+.column.column-last{padding-left:20px}
 .full-width{width:100%;border:5px solid #000}
 .content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}
 table.head-wrap .container{border-bottom:0}

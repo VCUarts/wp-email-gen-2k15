@@ -22,5 +22,11 @@ body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:
 Bring inline: Yes.
 */
 img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; max-width: 100%; height: auto;}
+.body-wrap {
+  img {
+    max-width: 510px;
+    width: 100%;
+  }
+}
 a img {border:none;}
 .image_fix {display:block;}
