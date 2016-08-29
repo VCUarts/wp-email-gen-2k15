@@ -114,7 +114,7 @@
                        <?php if ( $chunk_content ) :
                          the_field( 'chunk_content' );
                        endif; ?>
-                       <?php if ( $chunk_link ) : ?><a href="<?php echo esc_url( $chunk_link ); ?>" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/more-btn.png" /></a> <?php endif; ?>
+                       <?php if ( $chunk_link ) : ?><a href="<?php echo esc_url( $chunk_link ); ?>" target="_blank"><img class="more-btn" src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/more-btn.png" /></a> <?php endif; ?>
                       </td>
                   <?php endforeach; ?>
                   <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>

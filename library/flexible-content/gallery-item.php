@@ -1,23 +1,20 @@
 <?php
-$image = get_sub_field('gallery_image');
-$caption = get_sub_field('gallery_caption');
-$link = get_sub_field('gallery_link');
-?>
+$image = get_sub_field( 'gallery_image' );
+$caption = get_sub_field( 'gallery_caption' );
+$link = get_sub_field( 'gallery_link' );
 
-<?php if ($link): ?>
-  <a href="<?php echo $link; ?>" target="_blank">
-<?php endif; ?>
+if ( $link ) : ?>
+  <a href="<?php echo esc_url( $link ); ?>" target="_blank">
+<?php endif;
 
-  <?php if ($image): ?>
-    <img class="image_fix" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-  <?php endif; ?>
+  if ( $image ) : ?>
+    <img class="image_fix" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+  <?php endif;
 
-  <?php if ($caption): ?>
-    <div class="caption">
-      <?php echo $caption; ?>
-    </div>
-  <?php endif; ?>
+  if ( $caption ) :
+    echo '<div class="caption">' . wp_kses_data( $caption ) . '</div>';
+  endif;
 
-<?php if ($link): ?>
-  </a>
-<?php endif; ?>
+if ( $link ) :
+  echo '</a>';
+endif;

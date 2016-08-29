@@ -8,6 +8,7 @@ body{width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100
 #backgroundTable{margin:0;padding:0;width:100%!important;line-height:100%!important;background-color:#FFF;overflow:hidden}
 img{outline:0;-ms-interpolation-mode:bicubic;max-width:100%;height:auto}
 .body-wrap img{max-width:510px;width:100%}
+.body-wrap .more-btn{width:auto}
 a img{border:none}
 .image_fix{display:block}
 *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
