@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Karla);
 h1,h2{font-weight:200}
 a,img{text-decoration:none}
+.caption,.img-caption{overflow:hidden}
 #outlook a{padding:0}
 body{width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0}
 .ExternalClass{width:100%}
@@ -18,7 +19,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
 .header-logo{display:block;background:#fff;padding:40px 0;width:100%}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
-.column{width:235px}
+.column{width:230px}
 .column.column-one{float:left}
 .column.column-two{float:left;padding-left:20px}
 .column.column-first,.column.column-last,.column.column-mid{float:left;width:180px}
@@ -41,7 +42,7 @@ h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin-bottom:20px;display:block}
 a{color:#EE3440;margin:0;padding:0}
 p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#272727}
 .email-title{font-size:22px;margin-top:10px;margin-bottom:25px}
-.img-caption{background-color:#e3e3e3;overflow:hidden}
+.img-caption{background-color:#e3e3e3}
 .img-caption p{padding-left:25px;padding-right:25px;font-size:12px}
 .social{margin:20px 0 0;padding:20px 0}
 .social .social-table{table-layout:auto;width:100%}
@@ -49,9 +50,10 @@ p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#2
 .chunks{margin:30px 0 0}
 .chunks td.column{margin-bottom:35px}
 .chunk-title{margin-top:20px}
+.chunk-img,.img-border{border:5px solid #000}
 .how-to-apply{text-align:center;margin:0 0 -2px}
 .how-to-apply a{display:block;margin:0}
-.caption p{font-size:14px}
+.caption p{font-size:12px;padding:0;margin:5px 0}
 .footer{background:#000;color:#FFF}
 .footer .content{background:0 0;padding:20px 0 25px}
 .footer .content p{color:#BCBDC0;font-size:12px;line-height:22px;margin-bottom:30px}

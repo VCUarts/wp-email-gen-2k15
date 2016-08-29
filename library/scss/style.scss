@@ -7,6 +7,7 @@ Stylesheet: Main Stylesheet
 
 @import "color";
 @import "reset";
+$def-border: 5px solid $black;
 
 @import url(https://fonts.googleapis.com/css?family=Karla); 
 * { font-family:'Karla', 'Helvetica Neue', Helvetica, sans-serif; }
@@ -29,7 +30,7 @@ table, td, tr, thead, tbody {
   margin:0 auto!important; /* makes it centered */
   padding: 0 40px;
   clear:both!important;
-  border: 5px solid $black;
+  border: $def-border;
 }
 
 /* This should also be a block element, so that it will fill 100% of the .container */
@@ -53,7 +54,7 @@ table, td, tr, thead, tbody {
 }
 
 .column {
-  width: 235px;
+  width: 230px;
 
   &.column-one {
     padding-right: 20px;
@@ -80,7 +81,7 @@ table, td, tr, thead, tbody {
 }
 .full-width {
   width: 100%;
-  border: 5px solid $black;
+  border: $def-border;
 }
 
 /* Let's make sure tables in the content area are 100% wide */
@@ -187,6 +188,9 @@ p, ul {
 .chunk-title {
   margin-top:20px;
 }
+.chunk-img, .img-border {
+  border: $def-border;
+}
 
 /*  How to Apply Section */
 .how-to-apply {
@@ -200,8 +204,11 @@ p, ul {
 
 /*  Gallery Captions */
 .caption {
+  overflow: hidden;
   p {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 0;
+    margin: 5px 0 5px 0;
   }
 }
 

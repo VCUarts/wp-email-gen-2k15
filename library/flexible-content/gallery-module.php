@@ -33,11 +33,11 @@
                 elseif ($columns == 2):
 
                   if ($itemCount % 2 == 1 ): ?>
-                    <td class="column column-one" width="245" valign="top">
+                    <td class="column column-one" width="230" valign="top">
                       <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
                   <?php 
                   else: ?>
-                    <td class="column column-two" width="245" valign="top">
+                    <td class="column column-two" width="230" valign="top">
                       <?php get_template_part( 'library/flexible-content/gallery', 'item' ); ?>
                   <?php 
                   endif; ?>

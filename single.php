@@ -103,11 +103,11 @@
                       $chunk_link = get_field( 'more_link' ); ?>
 
                     <?php if ( 1 == $chunk_count++ % 2 ) : ?>
-                      <td class="column column-two" width="265" valign="top">
+                      <td class="column column-two" width="230" valign="top">
                     <?php else : ?>
-                      <td class="column column-one" width="265" valign="top">
+                      <td class="column column-one" width="230" valign="top">
                     <?php endif; ?>
-                       <?php if ( $image ) :?><img src="<?php echo esc_url( $image['url'] ); ?>"><?php endif; ?>
+                       <?php if ( $image ) :?><img class="chunk-img" src="<?php echo esc_url( $image['url'] ); ?>"><?php endif; ?>
                        <?php if ( $chunk_title ) :?>
                          <h5 class="chunk-title"><?php echo esc_html( $chunk_title ); ?></h5>
                        <?php endif; ?>

@@ -8,11 +8,11 @@ if ( $link ) : ?>
 <?php endif;
 
   if ( $image ) : ?>
-    <img class="image_fix" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+    <img class="img-border image_fix" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
   <?php endif;
 
   if ( $caption ) :
-    echo '<div class="caption">' . wp_kses_data( $caption ) . '</div>';
+    echo '<div class="caption"><p>' . wp_kses_data( $caption ) . '</p></div>';
   endif;
 
 if ( $link ) :
