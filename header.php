@@ -4,28 +4,17 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<?php $email_title = get_field( 'email_title' ); ?>
-		<title>
-			<?php
-			if ( $email_title ) :
-				echo esc_html( $email_title );
-			else :
-				the_title();
-			endif; ?>
-		</title>
+		<title><?php get_field( 'email_title' ) ? the_field( 'email_title' ) : the_title(); ?></title>
 
-		<?php wp_head(); ?>
+		<?php
+		wp_head();
 
+		if ( is_single() ) :
 
-		<?php 
-			if (is_single()):
-				$style = file_get_contents(get_stylesheet_directory_uri() . '/library/css/head.css'); ?>
+			echo '<style>' . esc_html( file_get_contents( get_stylesheet_directory_uri() . '/library/css/head.css' ) ) . '</style>';
 
-				<style>
-				<?php echo $style; ?>
-				</style>
-		<?php 
-			endif; ?>
+		endif;
+		?>
 
 	</head>
 
