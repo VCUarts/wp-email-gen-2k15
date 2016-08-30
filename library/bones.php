@@ -56,6 +56,10 @@ add_action( 'wp_footer', 'artmail_deregister_scripts' );
 if ( ! is_admin() ) {
   // livereload for development
   wp_register_script( 'bones-livereload', '//localhost:35729/livereload.js', array(), '', true );
+
+  // register main js
+  // wp_register_script( 'artsmail-js', get_stylesheet_directory_uri() . '/library/js/main.js', array(), '', 'all' );
+  // wp_enqueue_script( 'artsmail-js' );
 }
 
 if ( ! we_are_live() ) {
@@ -117,5 +121,3 @@ RANDOM CLEANUP ITEMS
 function bones_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
-
-?>
