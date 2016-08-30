@@ -16,7 +16,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
 .content{margin:0 auto;display:block;background-color:#FFF}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
-.header-logo{display:block;background:#fff;padding:40px 0;width:100%}
+.header-logo{display:block;padding:40px 0;text-align:center}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
 .column{width:230px}
 .column.column-one{float:left}

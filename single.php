@@ -14,13 +14,13 @@
 
           <td class="header container">
 
-            <div class="header-logo">
-              <table>
+            <div class="header-logo content">
+              <table cellpadding="0" cellspacing="0" border="0" align="center">
                 <tr>
                   <td>
-                    <a href="http://arts.vcu.edu/" target="_blank">
-                      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/branding/vcuarts_header.png" />
-                    </a>
+                      <a href="http://arts.vcu.edu/" target="_blank">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/library/images/vcuarts.png" width="140" height="30" />
+                      </a>
                   </td>
                 </tr>
               </table>
