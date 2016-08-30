@@ -60,10 +60,10 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
   - Create some boilerplate Sections, Controls and Settings
 */
 
-function bones_theme_customizer($wp_customize) {
-  $wp_customize->remove_section('colors');
-  $wp_customize->remove_section('background_image');
-  $wp_customize->remove_section('static_front_page');
+function bones_theme_customizer( $wp_customize ) {
+  $wp_customize->remove_section( 'colors' );
+  $wp_customize->remove_section( 'background_image' );
+  $wp_customize->remove_section( 'static_front_page' );
 }
 
 add_action( 'customize_register', 'bones_theme_customizer' );
@@ -100,7 +100,7 @@ add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
 
 function remove_thumbnail_dimensions( $html ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', '', $html );
     return $html;
 }
 
@@ -158,7 +158,7 @@ function emailgen_change_tinymce_colors( $init ) {
     $init['textcolor_rows'] = 6; // expand colour grid to 6 rows
     return $init;
 }
-add_filter('tiny_mce_before_init', 'emailgen_change_tinymce_colors');
+add_filter( 'tiny_mce_before_init', 'emailgen_change_tinymce_colors' );
 
 
 /**
@@ -176,31 +176,32 @@ use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 
 ob_start();
 
-add_action('shutdown', function() {
+add_action( 'shutdown', function() {
 
-    if(is_admin() || in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) )
+    if ( is_admin() || in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
         return;
+      }
 
     $final = '';
 
     // We'll need to get the number of ob levels we're in, so that we can iterate over each, collecting
     // that buffer's output into the final output.
-    $levels = count(ob_get_level());
+    $levels = count( ob_get_level() );
 
-    for ($i = 0; $i < $levels; $i++)
+    for ( $i = 0; $i < $levels; $i++ )
     {
         $final .= ob_get_clean();
     }
 
     // Apply any filters to the final output
-    echo apply_filters('final_output', $final);
+    echo apply_filters( 'final_output', $final );
 }, 0);
 
 // Buffered Output into cssToInlineStyles
-add_filter('final_output', function($output) {
+add_filter( 'final_output', function( $output ) {
   // create instance
   $cssToInlineStyles = new CssToInlineStyles();
-  $css = file_get_contents(__DIR__ . '/library/css/style.css');
+  $css = file_get_contents( __DIR__ . '/library/css/style.css' );
   // output
   echo $cssToInlineStyles->convert( $output, $css );
 });
