@@ -16,6 +16,17 @@
 
 		<?php wp_head(); ?>
 
+
+		<?php 
+			if (is_single()):
+				$style = file_get_contents(get_stylesheet_directory_uri() . '/library/css/head.css'); ?>
+
+				<style>
+				<?php echo $style; ?>
+				</style>
+		<?php 
+			endif; ?>
+
 	</head>
 
 	<body <?php body_class(); ?>>

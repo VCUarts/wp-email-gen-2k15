@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f78b3322493ce06464fb170d7ad94bce",
-    "content-hash": "e4bd7d599912da5113ce7626878cbab0",
+    "hash": "272b1293d6bda8ee9a64508307fd1558",
+    "content-hash": "85531e927cace0c809e1a78f8e9b4961",
     "packages": [
         {
             "name": "symfony/css-selector",
@@ -62,28 +62,29 @@
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "2.0.0",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "bb535b05ba1e23a0400ecc73adaa00d37289baf1"
+                "reference": "9753fc340726e327e4d48b7c0604f85475ae0bc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/bb535b05ba1e23a0400ecc73adaa00d37289baf1",
-                "reference": "bb535b05ba1e23a0400ecc73adaa00d37289baf1",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/9753fc340726e327e4d48b7c0604f85475ae0bc3",
+                "reference": "9753fc340726e327e4d48b7c0604f85475ae0bc3",
                 "shasum": ""
             },
             "require": {
-                "symfony/css-selector": "^2.7|~3.0"
+                "php": ">=5.3.0",
+                "symfony/css-selector": "~2.1|~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|5.1.*"
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -93,7 +94,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD"
             ],
             "authors": [
                 {
@@ -104,7 +105,7 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-            "time": "2016-02-23 13:27:47"
+            "time": "2015-12-08 16:14:14"
         }
     ],
     "packages-dev": [],

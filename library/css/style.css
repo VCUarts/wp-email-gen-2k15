@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Karla);
-h1,h2{font-weight:200}
+h1,h2{font-weight:700}
 a,img{text-decoration:none}
 .caption,.img-caption{overflow:hidden}
 #outlook a{padding:0}
@@ -12,7 +11,7 @@ img{outline:0;-ms-interpolation-mode:bicubic;max-width:100%;height:auto}
 .body-wrap .more-btn{width:auto}
 a img{border:none}
 .image_fix{display:block}
-*{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
+body *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
 .content{margin:0 auto;display:block;background-color:#FFF}
@@ -28,20 +27,20 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}
 table.head-wrap .container{border-bottom:0}
 table.body-wrap .container{border-top:0;border-bottom:0;padding-bottom:40px}
-h1,h2,h3,h4,h5,h6{font-family:Karla,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:1.1;margin-bottom:15px;color:#000}
+h1,h2,h3,h4,h5,h6{line-height:1.1;margin-bottom:15px;color:#000}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-size:60%;color:#272727;line-height:0;text-transform:none}
 .email-title,h6{text-transform:uppercase}
 h1{font-size:44px}
 h2{font-size:37px}
-h3,h4{font-weight:500}
+h3,h4,h5,h6{font-weight:400}
 h3{font-size:27px}
 h4{font-size:23px}
-h5{font-weight:200;font-size:24px;line-height:32px;margin-top:0}
-h6{font-weight:900;font-size:14px;color:#444}
+h5{font-size:24px;line-height:32px;margin-top:0}
+h6{font-size:14px;color:#444}
 h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin-bottom:20px;display:block}
 a{color:#EE3440;margin:0;padding:0}
-p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#272727}
-.email-title{font-size:22px;margin-top:10px;margin-bottom:25px}
+p,ul{margin-bottom:10px;font-size:16px;line-height:28px;color:#272727}
+.email-title{font-size:22px;margin-top:10px;margin-bottom:25px;font-weight:700}
 .img-caption{background-color:#e3e3e3}
 .img-caption p{padding-left:25px;padding-right:25px;font-size:12px}
 .social{margin:20px 0 0;padding:20px 0}
@@ -62,6 +61,3 @@ p,ul{margin-bottom:10px;font-weight:200;font-size:16px;line-height:28px;color:#2
 .footer .content .link-bar p{font-size:16px}
 .footer .content .link-bar p a{color:#fff}
 .hero-wrap+.content{padding-top:20px}
-@media only screen and (max-width:600px){.column{width:100%!important;float:none!important;display:block}
-.column-first,.column-last,.column-mid,.column-one,.column-two{padding:0!important;margin-bottom:50px!important}
-}
