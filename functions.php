@@ -92,6 +92,17 @@ show_admin_bar( false );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
+/*
+** Clean up all the things
+*/
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+remove_action( 'wp_head', 'rel_canonical' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+function remove_api() {
+  remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+  remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+}
+add_action( 'after_setup_theme', 'remove_api' );
 
 /*
 ** Strip Image Width / Height Attributes from Post Editor
