@@ -9,8 +9,7 @@ Stylesheet: Main Stylesheet
 @import "reset";
 $def-border: 5px solid $black;
 
-@import url("https://fonts.googleapis.com/css?family=Karla");
-* { font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif; }
+body * { font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif; }
 
 //let's reset all the good good
 table, td, tr, thead, tbody {
@@ -107,17 +106,15 @@ table.body-wrap {
     TYPOGRAPHY 
 ------------------------------------- */
 
-h1,h2,h3,h4,h5,h6 {
-font-family: "Karla", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:$black;
-}
+h1,h2,h3,h4,h5,h6 { line-height: 1.1; margin-bottom:15px; color:$black; }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: $dk-gray; line-height: 0; text-transform: none; }
 
-h1 { font-weight:200; font-size: 44px;}
-h2 { font-weight:200; font-size: 37px;}
-h3 { font-weight:500; font-size: 27px;}
-h4 { font-weight:500; font-size: 23px;}
-h5 { font-weight:200; font-size: 24px; line-height:32px; margin-top:0;}
-h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:$lt-black;}
+h1 { font-weight:700; font-size: 44px;}
+h2 { font-weight:700; font-size: 37px;}
+h3 { font-weight:400; font-size: 27px;}
+h4 { font-weight:400; font-size: 23px;}
+h5 { font-weight:400; font-size: 24px; line-height:32px; margin-top:0;}
+h6 { font-weight:400; font-size: 14px; text-transform: uppercase; color:$lt-black;}
 
 //for when people stick images inside the heading tag
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
@@ -138,7 +135,6 @@ a {
 
 p, ul { 
   margin-bottom: 10px; 
-  font-weight: 200; 
   font-size:16px; 
   line-height:28px;
   color: $dk-gray;
@@ -149,6 +145,7 @@ p, ul {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom:25px;
+  font-weight: 700;
 }
 
 /*  Hero Image Captions */
@@ -164,7 +161,6 @@ p, ul {
 
 /*  Social Link Bar */
 .social {
-  /*background: $lt-gray;*/
   margin: 20px 0 0 0;
   padding:20px 0;
 
@@ -252,16 +248,4 @@ p, ul {
 
 .hero-wrap + .content {
   padding-top: 20px;
-}
-
-/* ------------------------------------------- 
-    PHONE
-    For clients that support media queries.
-    Nothing fancy. 
--------------------------------------------- */
-@media only screen and (max-width: 600px) {
-
-  .column{width: 100%!important; float:none!important; display: block;}
-  .column-one, .column-two, .column-first, .column-mid, .column-last {padding: 0!important;margin-bottom:50px !important;}
-
 }
