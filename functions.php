@@ -72,31 +72,13 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 we_are_live() is a function for testing our environment. 
 @returns true if on production server false if not
 */
-
-function we_are_live(){
-  $current_server = $_SERVER['HTTP_HOST']; 
-
-  if ( $current_server == 'arts.vcu.edu' ){
-    return true;
-  } else {
+function we_are_live() {
+  $host = home_url();
+  if ( preg_match( '/\.dev/', $host ) ) {
     return false;
   }
+  return true;
 }
-
-/*
-get_development_scripts() tests our environment with we_are_live()
-@returns the appropriate scripts if local
-
-use [grunt sync] to get ports for the last three scripts
-*/
-function get_development_scripts(){
-
-  if ( !we_are_live() ){
-    include( 'library/dev-scripts.php' );
-  }
-
-}
-
 
 /*
 ** Removing Admin Bar

@@ -47,10 +47,20 @@ function bones_head_cleanup() {
 
 } /* end bones head cleanup */
 
-function artmail_deregister_scripts(){
+function artmail_deregister_scripts() {
   wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'artmail_deregister_scripts' );
+
+
+if ( ! is_admin() ) {
+  // livereload for development
+  wp_register_script( 'bones-livereload', '//localhost:35729/livereload.js', array(), '', true );
+}
+
+if ( ! we_are_live() ) {
+  wp_enqueue_script( 'bones-livereload' );
+}
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
