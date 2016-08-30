@@ -160,9 +160,7 @@ p, ul {
 
 /*  Social Link Bar */
 .social {
-  margin: 20px 0 0 0;
-  padding:20px 0;
-
+  margin: 40px 0;
   .social-table {
     table-layout: auto;
     width:100%;
@@ -171,6 +169,11 @@ p, ul {
       text-align: center;
     }
   }
+}
+
+.vcu-footer {
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*  How to Apply Section */
@@ -198,6 +201,15 @@ p, ul {
   }
 }
 
+.apply-now {
+  text-align: center;
+  display: block;
+  border: 1px solid $white;
+  padding: 15px 20px;
+  letter-spacing: 2px;
+  margin: 20px 0 40px 0;
+}
+
 /*  Gallery Captions */
 .caption {
   overflow: hidden;
@@ -219,7 +231,7 @@ p, ul {
 
   .content {
     background: none;
-    padding: 20px 0 25px 0;
+    padding: 20px 0 10px 0;
 
     p {
       color: $gray;
