@@ -1,5 +1,6 @@
 h1,h2{font-weight:700}
 a,img{text-decoration:none}
+.apply-now,.header-logo,.how-to-apply,.vcu-footer{text-align:center}
 .caption,.img-caption{overflow:hidden}
 #outlook a{padding:0}
 body{width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0}
@@ -16,7 +17,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
 .content{margin:0 auto;display:block;background-color:#FFF}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
-.header-logo{display:block;padding:40px 0;text-align:center}
+.header-logo{display:block;padding:40px 0}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
 .column{width:230px}
 .column.column-one{float:left}
@@ -43,18 +44,20 @@ p,ul{margin-bottom:10px;font-size:16px;line-height:28px;color:#272727}
 .email-title{font-size:22px;margin-top:10px;margin-bottom:25px;font-weight:700}
 .img-caption{background-color:#e3e3e3}
 .img-caption p{padding-left:25px;padding-right:25px;font-size:12px}
-.social{margin:20px 0 0;padding:20px 0}
+.social{margin:40px 0}
 .social .social-table{table-layout:auto;width:100%}
 .social .social-table td{width:20%;text-align:center}
+.vcu-footer{margin-top:20px}
 .chunks{margin:30px 0 0}
 .chunks td.column{margin-bottom:35px}
 .chunk-title{margin-top:20px}
 .chunk-img,.img-border{border:5px solid #000}
-.how-to-apply{text-align:center;margin:0 0 -2px}
+.how-to-apply{margin:0 0 -2px}
 .how-to-apply a{display:block;margin:0}
+.apply-now{display:block;border:1px solid #FFF;padding:15px 20px;letter-spacing:2px;margin:20px 0 40px}
 .caption p{font-size:12px;padding:0;margin:5px 0}
 .footer{background:#000;color:#FFF}
-.footer .content{background:0 0;padding:20px 0 25px}
+.footer .content{background:0 0;padding:20px 0 10px}
 .footer .content p{color:#BCBDC0;font-size:12px;line-height:22px;margin-bottom:30px}
 .footer .content a{color:#fff}
 .footer .content .link-bar{margin:0 0 20px;color:#4d4d4d}
