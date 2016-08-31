@@ -92,8 +92,12 @@ function change_post_menu_label() {
     global $menu;
     global $submenu;
     $menu[5][0] = 'Emails';
-    $submenu['edit.php'][5][0] = 'Email';
+    $submenu['edit.php'][5][0] = 'All Emails';
     $submenu['edit.php'][10][0] = 'Add Email';
+    remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );
+    remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
+    remove_menu_page( 'edit.php?post_type=page' );    //Pages
+    remove_menu_page( 'edit-comments.php' );          //Comments
     echo '';
 }
 function change_post_object_label() {
