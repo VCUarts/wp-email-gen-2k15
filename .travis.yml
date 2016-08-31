@@ -79,7 +79,7 @@ script:
   # -n flag: Do not print warnings. (shortcut for --warning-severity=0)
   # --standard: Use WordPress as the standard.
   # --extensions: Only sniff PHP files.
-  - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s . --standard=./codesniffer.ruleset.xml --extensions=php --ignore=./wp-advanced-search/*
+  - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s . --standard=./codesniffer.ruleset.xml --extensions=php --ignore=./vendor/*
 
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
