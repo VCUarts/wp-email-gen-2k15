@@ -1,4 +1,4 @@
-<?php if (is_single()): ?>
+<?php if ( is_single() ) :  ?>
   <div class="footer container">
    <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
      <tr>
