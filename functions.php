@@ -101,6 +101,11 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 
+add_filter( 'gform_disable_notification', 'gf_disable_notification', 10, 4 );
+function gf_disable_notification( $is_disabled, $notification, $form, $entry ) {
+  return true;
+}
+
 /*
 ** Adding VCUarts Red to TinyMCE colors
 */
