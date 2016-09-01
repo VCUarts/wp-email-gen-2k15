@@ -1,6 +1,6 @@
 <?php
 /*
-Author: Cody Whitby
+Author: VCUarts
 URL: http://arts.vcu.edu
 
 This is where you can drop your custom functions or
@@ -54,7 +54,7 @@ function bones_theme_customizer( $wp_customize ) {
 add_action( 'customize_register', 'bones_theme_customizer' );
 
 /*
-we_are_live() is a function for testing our environment. 
+we_are_live() is a function for testing our environment.
 @returns true if on production server false if not
 */
 function we_are_live() {
@@ -88,6 +88,10 @@ function remove_api() {
   remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 }
 add_action( 'after_setup_theme', 'remove_api' );
+remove_action( 'after_plugin_row_gwlimitchoices/gwlimitchoices.php', 'after_perk_plugin_row' );
+remove_action( 'after_plugin_row_gwlimitcheckboxes/gwlimitcheckboxes.php', 'after_perk_plugin_row' );
+remove_action( 'after_plugin_row_gwwordcount/gwwordcount.php', 'after_perk_plugin_row' );
+remove_action( 'after_plugin_row_gravityperks/gravityperks.php', 'GWPerks::after_plugin_row' );
 
 /*
 ** Strip Image Width / Height Attributes from Post Editor
@@ -178,20 +182,16 @@ use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 ob_start();
 
 add_action( 'shutdown', function() {
-
     if ( is_admin() || in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
         return;
       }
 
     $final = '';
-
     // We'll need to get the number of ob levels we're in, so that we can iterate over each, collecting
     // that buffer's output into the final output.
     $levels = count( ob_get_level() );
-
-    for ( $i = 0; $i < $levels; $i++ )
-    {
-        $final .= ob_get_clean();
+    for ( $i = 0; $i < $levels; $i++ ) {
+    $final .= ob_get_clean();
     }
 
     // Apply any filters to the final output

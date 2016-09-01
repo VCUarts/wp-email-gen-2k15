@@ -23,36 +23,40 @@ Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 */
 
 /************* DASHBOARD WIDGETS *****************/
-
 // disable default dashboard widgets
 function disable_default_dashboard_widgets() {
 	global $wp_meta_boxes;
-	// unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);    // Right Now Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);        // Activity Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']); // Comments Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);  // Incoming Links Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);         // Plugins Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now'] );    // Right Now Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity'] );        // Activity Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments'] ); // Comments Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links'] );  // Incoming Links Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'] );         // Plugins Widget
 
-	// unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);    // Quick Press Widget
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);     // Recent Drafts Widget
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);           //
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);         //
+	unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );    // Quick Press Widget
+	unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts'] );     // Recent Drafts Widget
+	unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary'] );           //
+	unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'] );         //
 
 	// remove plugin dashboard boxes
-	unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);           // Yoast's SEO Plugin Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['rg_forms_dashboard']);        // Gravity Forms Plugin Widget
-	unset($wp_meta_boxes['dashboard']['normal']['core']['bbp-dashboard-right-now']);   // bbPress Plugin Widget
-
-	/*
-	have more plugin widgets you'd like to remove?
-	share them with us so we can get a list of
-	the most commonly used. :D
-	https://github.com/eddiemachado/bones/issues
-	*/
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget'] );           // Yoast's SEO Plugin Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['rg_forms_dashboard'] );        // Gravity Forms Plugin Widget
+	unset( $wp_meta_boxes['dashboard']['normal']['core']['bbp-dashboard-right-now'] );   // bbPress Plugin Widget
 }
 
 // removing the dashboard widgets
 add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
+
+function artsmail_custom_dashboard_widgets() {
+  global $wp_meta_boxes;
+
+  wp_add_dashboard_widget( 'artsmail_dashboard_widget', 'VCUarts Admissions Email Generator', 'artsmail_widget_content' );
+}
+
+function artsmail_widget_content() {
+  echo '<h2 style="text-align:center; margin: 20px 0; color: #666; letter-spacing: 2px;"><span class="dashicons dashicons-email-alt" style="line-height: inherit;"></span> Make Email Great Again <span class="dashicons dashicons-thumbs-up" style="line-height: inherit;"></span></h2>';
+}
+
+add_action( 'wp_dashboard_setup', 'artsmail_custom_dashboard_widgets' );
 
 
 /************* CUSTOM LOGIN PAGE *****************/
@@ -66,10 +70,12 @@ function bones_login_css() {
 }
 
 // changing the logo link from wordpress.org to your site
-function bones_login_url() {  return home_url(); }
+function bones_login_url() {
+  return home_url(); }
 
 // changing the alt text on the logo to show your site name
-function bones_login_title() { return get_option( 'blogname' ); }
+function bones_login_title() {
+ return get_option( 'blogname' ); }
 
 // calling it only on the login page
 add_action( 'login_enqueue_scripts', 'bones_login_css', 10 );
@@ -81,13 +87,13 @@ add_filter( 'login_headertitle', 'bones_login_title' );
 
 // Custom Backend Footer
 function bones_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Developed by <a href="http://arts.vcu.edu" target="_blank">VCUarts</a></span>', 'bonestheme' );
+	echo '<span id="footer-thankyou">Developed by <a href="http://arts.vcu.edu" target="_blank">VCUarts</a></span>';
 }
 // adding it to the admin area
 add_filter( 'admin_footer_text', 'bones_custom_admin_footer' );
 
 
-// Change Posts label to Email in Admin Panel 
+// Change Posts label to Email in Admin Panel
 function change_post_menu_label() {
     global $menu;
     global $submenu;
