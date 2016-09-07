@@ -37,7 +37,6 @@ table, td, tr, thead, tbody {
 .content {
   margin:0 auto;
   display:block;
-  background-color: $white;
 
   &.browser-view {
     background-color: $background;
@@ -230,7 +229,6 @@ p, ul {
   color: $white;
 
   .content {
-    background: none;
     padding: 20px 0 10px 0;
 
     p {

@@ -15,7 +15,7 @@ a img{border:none}
 body *{font-family:Karla,'Helvetica Neue',Helvetica,sans-serif}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
-.content{margin:0 auto;display:block;background-color:#FFF}
+.content{margin:0 auto;display:block}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
 .header-logo{display:block;padding:40px 0}
 .column.column-first,.column.column-one{padding-right:20px;clear:left}
@@ -57,7 +57,7 @@ p,ul{margin-bottom:10px;font-size:16px;line-height:28px;color:#272727}
 .apply-now{display:block;border:1px solid #FFF;padding:15px 20px;letter-spacing:2px;margin:20px 0 40px}
 .caption p{font-size:12px;padding:0;margin:5px 0}
 .footer{background:#000;color:#FFF}
-.footer .content{background:0 0;padding:20px 0 10px}
+.footer .content{padding:20px 0 10px}
 .footer .content p{color:#BCBDC0;font-size:12px;line-height:22px;margin-bottom:30px}
 .footer .content a{color:#fff}
 .footer .content .link-bar{margin:0 0 20px;color:#4d4d4d}
