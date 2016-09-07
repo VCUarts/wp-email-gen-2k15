@@ -98,6 +98,10 @@
                   <?php foreach ( $chunks as $post ) : // variable must be called $post (IMPORTANT)
                     setup_postdata( $post );
                       $image = get_field( 'chunk_image' );
+                      $image_url = false;
+                      if ( $image ) {
+                        $image_url = isset( $image['sizes']['chunks-thumb'] ) ? $image['sizes']['chunks-thumb'] : $image['url'];
+                      }
                       $chunk_title = get_field( 'chunk_headline' );
                       $chunk_content = get_field( 'chunk_content' );
                       $chunk_link = get_field( 'more_link' ); ?>
@@ -107,7 +111,7 @@
                     <?php else : ?>
                       <td class="column column-one" width="230" valign="top">
                     <?php endif; ?>
-                       <?php if ( $image ) :?><img class="chunk-img" src="<?php echo esc_url( $image['url'] ); ?>"><?php endif; ?>
+                       <?php if ( $image_url ) : ?><img class="chunk-img" src="<?php echo esc_url( $image_url ); ?>"><?php endif; ?>
                        <?php if ( $chunk_title ) :?>
                          <h5 class="chunk-title"><?php echo esc_html( $chunk_title ); ?></h5>
                        <?php endif; ?>

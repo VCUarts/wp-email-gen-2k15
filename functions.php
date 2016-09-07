@@ -105,6 +105,13 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 
+// Custom Image Sizes
+add_action( 'after_setup_theme', 'artsmail_image_sizes' );
+function artsmail_image_sizes() {
+    add_image_size( 'chunks-thumb', 600, 600, true );
+}
+
+
 add_filter( 'gform_disable_notification', 'gf_disable_notification', 10, 4 );
 function gf_disable_notification( $is_disabled, $notification, $form, $entry ) {
   return true;
