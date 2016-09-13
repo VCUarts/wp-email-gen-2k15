@@ -52,19 +52,15 @@ function artmail_deregister_scripts() {
 }
 add_action( 'wp_footer', 'artmail_deregister_scripts' );
 
-
-if ( ! is_admin() ) {
-  // livereload for development
+function mail_livereload() {
+  if ( we_are_live() ) {
+    return;
+  }
   wp_register_script( 'bones-livereload', '//localhost:35729/livereload.js', array(), '', true );
-
-  // register main js
-  // wp_register_script( 'artsmail-js', get_stylesheet_directory_uri() . '/library/js/main.js', array(), '', 'all' );
-  // wp_enqueue_script( 'artsmail-js' );
-}
-
-if ( ! we_are_live() ) {
   wp_enqueue_script( 'bones-livereload' );
 }
+
+add_action( 'wp_enqueue_scripts', 'mail_livereload' );
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
