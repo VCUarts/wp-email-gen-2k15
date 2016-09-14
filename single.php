@@ -107,9 +107,9 @@
                       $chunk_link = get_field( 'more_link' ); ?>
 
                     <?php if ( 1 == $chunk_count++ % 2 ) : ?>
-                      <td class="column column-two" width="230" valign="top">
+                      <td class="column column-two" width="230" align="right" valign="top">
                     <?php else : ?>
-                      <td class="column column-one" width="230" valign="top">
+                      <td class="column column-one" width="230" align="left" valign="top">
                     <?php endif; ?>
                        <?php if ( $image_url ) : ?><img class="chunk-img" src="<?php echo esc_url( $image_url ); ?>"><?php endif; ?>
                        <?php if ( $chunk_title ) :?>
@@ -136,9 +136,5 @@
          </td>
        </tr>
      </table><!-- /BODY -->
-
-   </td>
- </tr>
- </table>
 
 <?php get_footer();

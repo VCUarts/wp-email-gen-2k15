@@ -10,7 +10,20 @@ Stylesheet: Main Stylesheet
 $def-border: 5px solid $black;
 
 body * { font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif; }
+body { max-width:100%!important; }
+html {
+  &:before,
+  &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
 
+  &:after {
+      clear: both;
+  }
+
+  zoom: 1;
+}
 //let's reset all the good good
 table, td, tr, thead, tbody {
   border-spacing: 0;
@@ -52,16 +65,22 @@ table, td, tr, thead, tbody {
 }
 
 .column {
-  width: 230px;
+  width: 100%;
+  display: block;
 
   &.column-one {
-    padding-right: 20px;
-    float: left;
-    clear: left;
+    img {
+      max-width: 230px !important;
+      width: 230px;
+    }
+    margin-top: 20px;
   }
   &.column-two {
-    float: left;
-    padding-left: 20px;
+    img {
+      max-width: 230px !important;
+      width: 230px;
+    }
+    margin-top: 20px;
   }
 
   // 3 Column Grid
@@ -168,6 +187,9 @@ p, ul {
       text-align: center;
     }
   }
+  a {
+    display: inline-block;
+  }
 }
 
 .vcu-footer {
@@ -182,6 +204,7 @@ p, ul {
   td.column {
     text-align: center;
     margin-bottom: 35px;
+    margin: 0 auto;
   }
 }
 .chunk-title {
@@ -224,13 +247,11 @@ p, ul {
 /* ------------------------------------- 
     FOOTER
 ------------------------------------- */
-
-.footer {
+.footer-wrap .container {
   background: $black;
+}
+.footer {
   color: $white;
-
-  .content {
-    padding: 20px 0 10px 0;
 
     p {
       color: $gray;
@@ -253,7 +274,6 @@ p, ul {
         }
       }
     }
-  }
 }
 
 .hero-wrap + .content {
