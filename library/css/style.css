@@ -20,6 +20,7 @@ html:after{clear:both}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
 .content{margin:0 auto;display:block}
+.column.column-one,.column.column-two{margin-top:20px}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
 .header-logo{display:block;padding:40px 0}
 .column{width:100%;display:block}
