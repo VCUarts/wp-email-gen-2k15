@@ -1,9 +1,8 @@
 <?php if (is_single()): ?>
-  <div class="footer container">
-   <table cellpadding="0" cellspacing="0" border="0" align="center" class="head-wrap">
+   <table cellpadding="0" cellspacing="0" border="0" align="center" class="footer-wrap">
      <tr>
-       <td>
-         <div class="content">
+       <td class="container">
+         <div class="footer content">
            <table>
              <tr>
                <td>
@@ -57,10 +56,11 @@
       <td></td>
     </tr>
   </table>
-</div>
-<?php endif; ?>
-
 <?php wp_footer(); ?>
+  </td>
+</tr>
+</table>
+<?php endif; ?>
 </body>
 
 </html>
