@@ -18,7 +18,7 @@ html{zoom:1}
 html:after,html:before{content:" ";display:table}
 html:after{clear:both}
 table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
-.container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 40px;clear:both!important;border:5px solid #000}
+.container{display:block!important;max-width:510px!important;margin:0 auto!important;padding:0 20px;clear:both!important;border:5px solid #000}
 .content{margin:0 auto;display:block}
 .column.column-one,.column.column-two{margin-top:20px}
 .content.browser-view{background-color:#FFF;padding:10px 0;font-size:12px}
@@ -29,7 +29,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .column.column-first{padding-right:20px;clear:left}
 .column.column-last{padding-left:20px}
 .full-width{width:100%;border:5px solid #000}
-.content table,table.body-wrap,table.footer-wrap,table.head-wrap{width:100%}
+.content table,table.body-wrap,table.footer-wrap,table.head-wrap,table.hero-wrap{width:100%}
 table.head-wrap .container{border-bottom:0}
 table.body-wrap .container{border-top:0;border-bottom:0;padding-bottom:40px}
 h1,h2,h3,h4,h5,h6{line-height:1.1;margin-bottom:15px;color:#000}

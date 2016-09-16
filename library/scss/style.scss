@@ -41,7 +41,7 @@ table, td, tr, thead, tbody {
   display:block!important;
   max-width:510px!important;
   margin:0 auto!important;
-  padding: 0 40px;
+  padding: 0 20px;
   clear:both!important;
   border: $def-border;
 }
@@ -104,7 +104,7 @@ table, td, tr, thead, tbody {
 /* Let's make sure tables in the content area are 100% wide */
 .content table { width: 100%; }
 
-table.head-wrap, table.body-wrap, table.footer-wrap { width: 100%; }
+table.head-wrap, table.body-wrap, table.footer-wrap, table.hero-wrap { width: 100%; }
 
 table.head-wrap {
   .container {
