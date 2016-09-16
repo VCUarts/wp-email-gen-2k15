@@ -6,13 +6,12 @@ $link = get_sub_field('hero_link'); ?>
 <div class="hero-wrap content"> 
   <table cellpadding="0" cellspacing="0" border="0" align="center">
     <tr>
-      <td>
-        <div class="gallery">
+      <td width="500">
           <table cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
-              <td class="column full-width">
+              <td class="full-width">
                 <?php if ($link){?><a href="<?php echo $link; ?>" target="_blank"><?php }?>
-                  <img class="image_fix" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  <img class="image_fix" src="<?php echo $image['url']; ?>"/>
                 <?php if ($link){?></a><?php }?>
 
                 <?php if ($caption): ?> 
@@ -21,7 +20,6 @@ $link = get_sub_field('hero_link'); ?>
               </td>
             </tr>
           </table>
-        </div>
       </td>
     </tr>
   </table>
