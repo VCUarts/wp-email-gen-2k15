@@ -31,7 +31,7 @@ table,tbody,td,thead,tr{border-spacing:0;padding:0;margin:0}
 .full-width{width:100%;border:5px solid #000}
 .content table,table.body-wrap,table.footer-wrap,table.head-wrap,table.hero-wrap{width:100%}
 table.head-wrap .container{border-bottom:0}
-table.body-wrap .container{border-top:0;border-bottom:0;padding-bottom:40px}
+table.body-wrap .container{border-top:0;border-bottom:0;padding-bottom:40px!important}
 h1,h2,h3,h4,h5,h6{line-height:1.1;margin-bottom:15px;color:#000}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-size:60%;color:#272727;line-height:0;text-transform:none}
 .email-title,h6{text-transform:uppercase}
