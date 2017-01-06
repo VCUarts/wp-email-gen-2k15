@@ -1,4 +1,4 @@
-<?php if (is_single()): ?>
+<?php if ( is_single() ) :  ?>
    <table cellpadding="0" cellspacing="0" border="0" align="center" class="footer-wrap">
      <tr>
        <td class="container">
@@ -6,9 +6,9 @@
            <table>
              <tr>
                <td>
-
-                 <a href="http://arts.vcu.edu/admissions/how-to-apply/" title="Apply Now" class="apply-now">APPLY NOW</a>
-
+                <?php if ( get_field( 'apply_btn_inc' ) ) : ?>
+                   <a href="http://arts.vcu.edu/admissions/how-to-apply/" title="Apply Now" class="apply-now">APPLY NOW</a>
+                 <?php endif; ?>
                  <div class="social">
                    <table cellpadding="0" cellspacing="0" border="0" align="center" class="social-table">
                      <tr>
