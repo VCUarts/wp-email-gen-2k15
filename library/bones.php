@@ -68,7 +68,7 @@ function rw_title( $title, $sep, $seplocation ) {
   global $page, $paged;
 
   // Don't affect in feeds.
-  if ( is_feed() ) return $title;
+  if ( is_feed() ) { return $title; }
 
   // Add the blog's name
   if ( 'right' == $seplocation ) {
@@ -94,17 +94,18 @@ function rw_title( $title, $sep, $seplocation ) {
 } // end better title
 
 // remove WP version from RSS
-function bones_rss_version() { return ''; }
+function bones_rss_version() {
+ return ''; }
 
 // remove WP version from scripts
 function bones_remove_wp_ver_css_js( $src ) {
-	if ( strpos( $src, 'ver=' ) )
-		$src = remove_query_arg( 'ver', $src );
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src ); }
 	return $src;
 }
 
 // remove injected CSS from gallery
-function bones_gallery_style($css) {
+function bones_gallery_style( $css ) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
@@ -114,6 +115,6 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function bones_filter_ptags_on_images($content){
-	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+function bones_filter_ptags_on_images( $content ) {
+	return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
 }
