@@ -9,8 +9,7 @@
 		<?php
 		wp_head();
 		if ( is_single() ) :
-      echo '<style>' . esc_html( file_get_contents( get_stylesheet_directory_uri() . '/library/css/head.css' ) ) . '</style>';
-			echo '<style>' . esc_html( file_get_contents( get_stylesheet_directory_uri() . '/library/css/style.css' ) ) . '</style>';
+			echo '<style>' . esc_html( file_get_contents( get_stylesheet_directory_uri() . '/library/css/head.css' ) ) . '</style>';
 		endif;
 		?>
 	</head>
