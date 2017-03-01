@@ -313,9 +313,9 @@ add_filter( 'final_output', function( $output ) {
   // create instance
   $cssToInlineStyles = new CssToInlineStyles();
   $css = file_get_contents( __DIR__ . '/library/css/style.css' );
-  $cssToInlineStyles->setHTML( $output );
-  $cssToInlineStyles->setCSS( $css );
-  // output
-  $converted = $cssToInlineStyles->convert();
+  $converted = $cssToInlineStyles->convert(
+    $output,
+    $css
+  );
   echo minify_html( $converted );
 });
