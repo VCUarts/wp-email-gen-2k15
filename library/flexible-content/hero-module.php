@@ -15,7 +15,7 @@ $link = get_sub_field( 'hero_link' ); ?>
                 <?php if ( $link ) { ?></a><?php }?>
 
                 <?php if ( $caption ) :  ?> 
-                  <div class="img-caption"><?php echo $caption; ?></div>
+                  <div class="img-caption"><?php echo wp_kses_data( $caption ); ?></div>
                 <?php endif; ?>
               </td>
             </tr>
