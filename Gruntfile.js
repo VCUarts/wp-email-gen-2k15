@@ -16,8 +16,8 @@ module.exports = function(grunt) {
             }]
           },
           options: {
-            sourceMap: false, 
-            outputStyle: 'compact', 
+            sourcemap: 'none', 
+            outputStyle: 'nested', 
             imagePath: "library/images",
           }
         },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         watch: {
             scss: {
                 files: ['library/scss/**/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin']
+                tasks: ['sass', 'autoprefixer']
             },
             css: {
                 files: ['library/css/**/*.css']
@@ -48,7 +48,8 @@ module.exports = function(grunt) {
             options: {
                 report: 'min',
                 keepBreaks: true,
-                keepSpecialComments: 0
+                keepSpecialComments: 0,
+                level: 1
             },
             combine: {
                 files: {
@@ -81,5 +82,5 @@ module.exports = function(grunt) {
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('init', ['build']);
     grunt.registerTask('dev', ['watch']);
-    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('build', ['sass', 'autoprefixer']);
 };
