@@ -288,7 +288,7 @@ function minify_html( $input ) {
  *
  * Buffers the entire WP process, capturing the final output for manipulation.
  */
-
+/*
 ob_start();
 
 add_action( 'shutdown', function() {
@@ -319,3 +319,4 @@ add_filter( 'final_output', function( $output ) {
   );
   echo minify_html( $converted );
 });
+*/

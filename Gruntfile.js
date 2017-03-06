@@ -16,8 +16,8 @@ module.exports = function(grunt) {
             }]
           },
           options: {
-            sourceMap: false, 
-            outputStyle: 'compact', 
+            sourcemap: 'none', 
+            outputStyle: 'compressed', 
             imagePath: "library/images",
           }
         },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         watch: {
             scss: {
                 files: ['library/scss/**/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin']
+                tasks: ['sass', 'autoprefixer']
             },
             css: {
                 files: ['library/css/**/*.css']
@@ -40,19 +40,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'library/css/style.css' : 'library/css/style.css'
-                }
-            }
-        },
- 
-        cssmin: {
-            options: {
-                report: 'min',
-                keepBreaks: true,
-                keepSpecialComments: 0
-            },
-            combine: {
-                files: {
-                    'library/css/style.css': ['library/css/style.css']
                 }
             }
         },
@@ -72,7 +59,6 @@ module.exports = function(grunt) {
     // Sass
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
  
     // Browser Reload + File Watch
     grunt.loadNpmTasks('grunt-concurrent');
@@ -81,5 +67,5 @@ module.exports = function(grunt) {
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('init', ['build']);
     grunt.registerTask('dev', ['watch']);
-    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('build', ['sass', 'autoprefixer']);
 };

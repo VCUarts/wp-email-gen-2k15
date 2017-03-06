@@ -9,7 +9,6 @@
     "grunt": "latest",
     "grunt-autoprefixer": "latest",
     "grunt-concurrent": "latest",
-    "grunt-contrib-cssmin": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-devcode": "latest",
     "grunt-sass": "latest"
