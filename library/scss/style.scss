@@ -39,9 +39,9 @@
 
 $def-border: 5px solid $black;
 
-body * {
+/*body * {
   font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
-}
+}*/
 
 body {
   max-width: 100% !important;
@@ -91,6 +91,7 @@ table, td, tr, thead, tbody {
 .content {
   margin: 0 auto;
   display: block;
+  font-family: Karla, Helvetica Neue, Helvetica, sans-serif;
 
   &.browser-view {
     background-color: $background;

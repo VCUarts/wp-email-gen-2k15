@@ -17,7 +17,7 @@ module.exports = function(grunt) {
           },
           options: {
             sourcemap: 'none', 
-            outputStyle: 'nested', 
+            outputStyle: 'compressed', 
             imagePath: "library/images",
           }
         },
@@ -43,20 +43,6 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
-        cssmin: {
-            options: {
-                report: 'min',
-                keepBreaks: true,
-                keepSpecialComments: 0,
-                level: 1
-            },
-            combine: {
-                files: {
-                    'library/css/style.css': ['library/css/style.css']
-                }
-            }
-        },
 
         concurrent: {
             watch: {
@@ -73,7 +59,6 @@ module.exports = function(grunt) {
     // Sass
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
  
     // Browser Reload + File Watch
     grunt.loadNpmTasks('grunt-concurrent');
