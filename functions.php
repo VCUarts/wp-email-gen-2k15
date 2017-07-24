@@ -22,7 +22,7 @@ Let's get everything up and running.
 function bones_ahoy() {
 
   //Allow editor style.
-  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
+  //add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // Custom Chunks Post Type
   require_once( 'library/chunks-post-type.php' );
